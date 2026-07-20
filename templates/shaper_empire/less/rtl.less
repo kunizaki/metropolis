@@ -1,0 +1,303 @@
+/**
+ * @package Helix Framework
+ * @template Shaper Empire
+ * @author JoomShaper https://www.joomshaper.com
+ * @copyright Copyright (c) 2010 - 2016 JoomShaper
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 or later
+ */
+
+ @import 'variables';
+ @import 'mixins';
+
+
+/* RTL Direction
+*=======================================*/
+
+body {
+	&.rtl {
+		#sp-top-bar .sp-module {
+			margin: 0 20px 0 0;
+		}
+
+		//top address
+		.sp-contact-info {
+			float: left;
+		}
+
+		// lang switcher
+		.sp-module-content .mod-languages ul.lang-inline li {
+			margin: 0 0 0 5px;
+		}
+
+
+		//Offcanvas
+		#offcanvas-toggler {
+			float: left;
+		}
+		#offcanvas-toggler >i {
+			padding: 0 10px 0 0;
+
+		}
+		.close-offcanvas {
+			right: auto;
+			left: 10px;
+		}
+		.offcanvas-menu {
+			-webkit-transition: opacity 400ms cubic-bezier(0.7,0,0.3,1), left 400ms cubic-bezier(0.7,0,0.3,1);
+			transition: opacity 400ms cubic-bezier(0.7,0,0.3,1), left 400ms cubic-bezier(0.7,0,0.3,1);
+		}
+
+		.body-innerwrapper:after {
+			left: 0;
+		}
+
+		.offcanvas-menu {
+			left: -280px;
+		}
+
+		&.offcanvas {
+			.offcanvas-menu {
+				left: 0;
+			}
+		}
+
+		.offcanvas-menu .offcanvas-inner .sp-module ul > li .offcanvas-menu-toggler{
+			right: inherit;
+			left: 0;
+		}
+
+		//mega menu
+		.sp-megamenu-parent {
+			float: left;
+		}
+
+		.sp-megamenu-parent .sp-dropdown .sp-dropdown-items .sp-has-child>a:after {
+			float: left;
+			content: " \f104";
+		}
+
+		//blog
+		.entry-header.has-post-format {
+			margin-left: 0;
+			margin-right: 68px;
+		}
+		.post-format {
+			left: auto;
+			right: -68px;
+		}
+		.article-info >dt >i, .article-info >dd >i {
+			margin-right: 0;
+			margin-left: 3px;
+		}
+		.entry-link:before {
+			top:auto;
+			left: auto;
+			right: -60px;
+			transform: rotate(-90deg);
+		}
+		.entry-quote:before {
+			left: auto;
+			transform: rotate(-15deg);
+			top:auto;
+			right: -40px;
+		}
+		.categories-list .page-header a.pull-right {
+			float: left !important;
+		}
+		.newsfeed-category .category li .pull-left{
+			float: right !important;
+		}
+
+		//search
+		.search .btn-toolbar .pull-left{
+			float: right !important;
+		}
+
+
+		/**************************************************************************************/
+		/**************************           Shaper Empire           ************************/
+		/************************************************************************************/
+
+		.sppb-text-left{
+			text-align: right;
+		}
+		.sppb-text-right{
+			text-align: left;
+		}
+
+
+		//Header
+		.sp-contact-info:before{
+			left: inherit;
+			right: -40px;
+		}
+		.sp-megamenu-parent >li >a:after{
+			left: 0;
+			right: -2px;
+		}
+		.sp-megamenu-parent .sp-dropdown.sp-dropdown-main.sp-menu-right{
+			left: inherit;
+			right: 0;
+		}
+		.sp-megamenu-parent .sp-dropdown.sp-dropdown-sub{
+			left: inherit;
+			right: 100%;
+		}
+
+		//Slider
+		.slide_thumb_wrap .flexslider .slides li .thumb-wrap .thumb-text{
+			padding: 58px 45px 0 0;
+		}
+		.slide_thumb_wrap .flexslider .slides li{
+			float: right !important;
+		}
+
+		//Property-Search
+		#sp-page-builder .empire-property-search .sp-property-search .property-advance-search a span{
+			padding-left: 0;
+			padding-right: 5px;
+		}
+
+		//Featured Property
+		.spproperty .sp-properties-wrapper .property-details .property-summery ul li:last-child{
+			margin-right: 14px;
+		}
+		.spproperty .sp-properties-wrapper .property-details .property-summery ul li:first-child{
+			margin-right: 0;
+		}
+
+		//Testimonial Pro
+		.sppb-testimonial-pro .sppb-testimonial-wrapper .sppb-testimonial-message{
+			text-align: right;
+		}
+		.sppb-testimonial-pro .sppb-testimonial-wrapper .sppb-client-wrap{
+			left: inherit;
+			right: 25px;
+		}
+		.sppb-testimonial-pro .sppb-testimonial-wrapper .sppb-client-wrap img{
+			float: right;
+		}
+    // addon accordion
+    .sppb-addon-accordion .sppb-panel .sppb-panel-heading:before {
+      right: unset;
+      left: 0;
+    }
+		//Article Addon
+		.sppb-addon-articles .sppb-addon-article .sppb-article-text-wrap .sppb-meta-author{
+			strong{
+				float: left;
+				margin-right: 2px;
+			}
+		}
+
+		//Bottom
+		#sp-bottom{
+			strong{
+				float: right;
+			}
+		}
+		.sp-module .bottom-social ul li a i{
+			float: right;
+		}
+
+		//Fotter
+		#sp-footer1{
+			text-align: right;
+		}
+		#sp-footer ul.menu li a{
+			margin-right: 0;
+			margin-left: 38px;
+		}
+		#sp-footer .sp-copyright{
+			text-align: left;
+		}
+
+		//About Page
+		.about-top-wrapper{
+			.sppb-col-sm-9{
+				float: right;
+			}
+		}
+
+		//Contact Page
+		.empire-contact-feature .sppb-addon-feature .sppb-addon-content .sppb-icon{
+			left: inherit;
+			right: 30px;
+		}
+		#sp-page-builder .empire-lets-talk .sppb-addon-ajax-contact .sppb-ajaxt-contact-form .sppb-btn.sppb-btn-success{
+			float: left;
+		}
+
+		//Blog Listing
+		article.item p{
+			padding-left: 0;
+			padding-right: 30px;
+		}
+		article.item .entry-header .article-info dd{
+			span{
+				float: right;
+				margin-left: 2px;
+			}
+		}
+
+		//Blog-Details
+		.helix-social-share{
+			left: inherit;
+			right: 37px;
+		}
+		article.item.item-page .pager.pagenav{
+			right: auto;
+			left: 25px;
+		}
+
+		//Property-Details
+		.sp-module.property-search .property-advance-search a span{
+			padding-left: 0;
+			padding-right: 5px;
+		}
+		.owl-carousel.owl-loaded{
+			direction: ltr;
+		}
+		.spproperty-details-title .sppropety-details-social li:first-child{
+			margin-right: 0;
+		}
+		.spproperty-details-title .sppropety-details-social li:last-child{
+			margin-right: 12px;
+		}
+		.spproperty .pull-left {
+			float: right !important;
+		}
+		.spproperty-short-overview .spproperty-overview-list .spproperty-single-list p{
+			margin-left: 0;
+			margin-right: 20px;
+		}
+		.spproperty-feature-overview .spproperty-feature-overview-list li,
+		.spproperty-feature-overview .spproperty-feature-overview-list li .spproperty-feature-overview-signle-list,
+		.spproperty-feature-overview .spproperty-feature-overview-list li .spproperty-feature-overview-signle-list i{
+			float: right;
+		}
+		.spproperty-feature-overview .spproperty-feature-overview-list li .spproperty-feature-overview-signle-list span{
+			padding-left: 0;
+			padding-right: 8px;
+		}
+		.spproperty-map-widget .spproperty-map p{
+			left: inherit;
+			right: 30px;
+		}
+		.spproperty-agent-widget .agent-img{
+			left: inherit;
+			right: 32px;
+		}
+		.spproperty-agent-widget ul.spproperty-agent-social{
+			right: inherit;
+			left: 13px;
+		}
+		.spproperty-agent-widget ul.spproperty-agent-mailing li span{
+			padding-left: 0;
+			padding-right: 9px;
+		}
+		.spproperty-contact-us-widget .spproperty-widget-form textarea{
+			padding: 15px 15px 0 0;
+		}
+	}
+}

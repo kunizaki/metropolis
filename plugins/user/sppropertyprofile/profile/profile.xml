@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Front-End -->
+<form>
+    <fields name="sppropertyprofile" >
+        <fieldset name="sppropertyprofile" label="PLG_SP_USER_PROFILE_SLIDER_LABEL" >
+            <field name="designation" type="text" label="PLG_USER_PROFILE_FIELD_DESIGNATION" description="PLG_USER_PROFILE_FIELD_DESIGNATION_DESC" filter="string" />
+            <field name="phone" type="text" label="PLG_USER_PROFILE_FIELD_PHONE" description="PLG_USER_PROFILE_FIELD_PHONE_DESC" filter="string" />
+            <field name="mobile" type="text" label="PLG_USER_PROFILE_FIELD_MOBILE" description="PLG_USER_PROFILE_FIELD_MOBILE_DESC" filter="string" />
+            <field name="skype" type="text" label="PLG_USER_PROFILE_FIELD_SKYPE" description="PLG_USER_PROFILE_FIELD_SKYPE_DESC" filter="string"/>
+            <field name="image" type="file" label="PLG_USER_PROFILE_FIELD_IMAGE" description="PLG_USER_PROFILE_FIELD_IMAGE_DESC" accept="image/*" validate="filePath"/>
+            <field name="description" type="textarea" label="PLG_USER_PROFILE_FIELD_DESCRIPTION" description="PLG_USER_PROFILE_FIELD_DESCRIPTION_DESC" filter="string" />
+            <field name="facebook" type="text" label="PLG_USER_PROFILE_FIELD_FACEBOOK" description="PLG_USER_PROFILE_FIELD_FACEBOOK_DESC" filter="string"/>
+            <field name="twitter" type="text" label="PLG_USER_PROFILE_FIELD_TWITTER" description="PLG_USER_PROFILE_FIELD_TWITTER_DESC" filter="string"/>
+            <field name="linkedin" type="text" label="PLG_USER_PROFILE_FIELD_LINKEDIN" description="PLG_USER_PROFILE_FIELD_LINKEDIN_DESC" filter="string"/>
+            <field name="gplus" type="text" label="PLG_USER_PROFILE_FIELD_GPLUS" description="PLG_USER_PROFILE_FIELD_GPLUS_DESC" filter="string"/>
+
+            <field name="group" type="usergrouplist" id="group" label="PLG_USER_PROFILE_FIELD_USER_GROUPS" description="PLG_USER_PROFILE_FIELD_USER_GROUPS_DESC">
+                <option value="">JSELECT</option>
+            </field>
+        </fieldset>
+    </fields>
+</form>

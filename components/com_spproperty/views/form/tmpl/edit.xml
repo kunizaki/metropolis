@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_SPPROPERTY_APPLY_AS_AGENT" option="COM_CONTENT_FORM_VIEW_DEFAULT_OPTION">
+		<help
+			key = "COM_SPPROPERTY_APPLY_AS_AGENT_HELP"
+		/>
+		<message>
+			<![CDATA[COM_SPPROPERTY_APPLY_AS_AGENT_DESC]]>
+		</message>
+	</layout>
+	<fields name="params">
+		
+	</fields>
+</metadata>

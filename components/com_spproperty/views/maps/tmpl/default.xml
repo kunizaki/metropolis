@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<fields name="params" addfieldpath="/components/com_spproperty/fields">
+		<fieldset name="basic" label="COM_SPPROPERTY_MENUSET_MAP">
+			<field name="catid" type="spcats" default="" label="COM_SPPROPERTY_FIELD_SELECT_CATEGORY" description="COM_SPPROPERTY_FIELD_SELECT_CATEGORY_DESC"/>
+			<field name="property_status" type="list" label="COM_SPPROPERTY_FIELD_PROPERTY_STATUS" description="COM_SPPROPERTY_FIELD_PROPERTY_STATUS_DESC">
+				<option value="">JALL</option>
+				<option value="rent">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_RENT</option>
+				<option value="sell">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_SELL</option>
+				<option value="in_hold">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_HOLD</option>
+				<option value="pending">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_PENDING</option>
+				<option value="sold">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_SOLD</option>
+				<option value="under_offer">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_UNDER_OFFER</option>
+			</field>
+			<field name="agentid" type="spagent" default="" label="COM_SPPROPERTY_FIELD_SELECT_AGENT" description="COM_SPPROPERTY_FIELD_SELECT_AGENT_DESC"/>
+			<field name="layout_type" type="componentlayout" label="JGLOBAL_FIELD_LAYOUT_LABEL" description="JGLOBAL_FIELD_LAYOUT_DESC" menuitems="true" extension="com_spproperty" view="maps"  class="form-select"/>
+			<field name="map_height" type='text' default="400" label="COM_SPPROPERTY_MAP_HEIGHT" description="COM_SPPROPERTY_MAP_HEIGHT_DESC" />
+			<field name="columns" type='list' default="2" label="COM_SPPROPERTY_MAP_COLUMN" description="COM_SPPROPERTY_MAP_COLUMN_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</field>
+
+			<field name="order_by" type="list" default="" label="COM_SPPROPERTY_FIELD_ORDER" description="COM_SPPROPERTY_FIELD_ORDER_BY_DESC">
+				<option value="desc">COM_SPPROPERTY_FIELD_DESC</option>
+				<option value="asc">COM_SPPROPERTY_FIELD_ASC</option>
+				<option value="featured">COM_SPPROPERTY_FIELD_FEATURED</option>
+			</field>
+		</fieldset>
+	</fields>
+	<layout title="COM_SPPROPERTY_LAYOUT_HALF_MAP" option="COM_SPPROPERTY_LAYOUT_HALF_MAP">
+		<help key = "COM_SPPROPERTY_LAYOUT_HALF_MAP" />
+		<message>
+			<![CDATA[COM_SPPROPERTY_LAYOUT_HALF_MAP_DESC]]>
+		</message>
+	</layout>
+</metadata>

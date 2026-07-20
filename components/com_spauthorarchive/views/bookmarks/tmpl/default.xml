@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<fields name="params">
+		<fieldset name="basic" label="COM_SPAUTHORARCHIVE_FIELDSET_BOOKMARKS_SETTINGS">
+			<!-- Author' article settings -->
+			<field name="art_articles_spacer" type="spacer" label="COM_SPAUTHORARCHIVE_FIELD_ARTICLE_SPACER" />
+
+			<field name="art_columns" type="list" default="3" label="COM_SPAUTHORARCHIVE_FIELD_COLUMNS" description="COM_SPAUTHORARCHIVE_FIELD_COLUMNS_DESC">
+				<option value="2">COM_SPAUTHORARCHIVE_FIELD_LAYOUT_COLUMNS_2</option>
+				<option value="3">COM_SPAUTHORARCHIVE_FIELD_LAYOUT_COLUMNS_3</option>
+				<option value="4">COM_SPAUTHORARCHIVE_FIELD_LAYOUT_COLUMNS_4</option>
+				<option value="6">COM_SPAUTHORARCHIVE_FIELD_LAYOUT_COLUMNS_6</option>
+			</field>
+			
+			<field name="art_show_thumbnail" type="radio" class="btn-group" default="1" label="COM_SPAUTHORARCHIVE_SHOW_THUMBNAIL" description="COM_SPAUTHORARCHIVE_SHOW_THUMBNAIL_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="art_show_intro" type="radio" class="btn-group" default="1" label="COM_SPAUTHORARCHIVE_SHOW_INTRO" description="COM_SPAUTHORARCHIVE_SHOW_INTRO_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="art_limit" type="number" default="9" label="COM_SPAUTHORARCHIVE_FIELD_LIMIT" description="COM_SPAUTHORARCHIVE_FIELD_LIMIT_DESC" />
+			<field name="art_intro_limit" type="number" default="250" label="COM_SPAUTHORARCHIVE_FIELD_INTRO_LIMIT" description="COM_SPAUTHORARCHIVE_FIELD_INTRO_LIMIT_DESC" />
+			<field name="art_readmore_text" type="text" label="COM_SPAUTHORARCHIVE_FIELD_READMORE_TXT" description="COM_SPAUTHORARCHIVE_FIELD_READMORE_TXT_DESC" />
+
+		</fieldset>
+	</fields>
+</metadata>

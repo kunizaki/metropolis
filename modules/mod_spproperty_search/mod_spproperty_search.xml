@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.6"
+	client="site"
+	method="upgrade">
+	<name>SP Property Search</name>
+	<author>JoomShaper.com</author>
+	<creationDate>September 2016</creationDate>
+	<copyright>Copyright (C) 2010 - 2016 JoomShaper. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later;</license>
+	<authorEmail>support@joomshaper.com</authorEmail>
+	<authorUrl>www.joomshaper.com</authorUrl>
+	<version>4.1.1</version>
+	<description>SP Property Search</description>
+	<files>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+		<filename module="mod_spproperty_search">mod_spproperty_search.php</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">en-GB.mod_spproperty_search.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="view" type="text" label="MOD_SPPROPERTY_SEARCH_VIEW" description="MOD_SPPROPERTY_SEARCH_VIEW_DESC" default="properties" />
+				<field name="ranger" type="list" label="MOD_SPPROPERTY_SEARCH_RANGE_SYSTEM" description="MOD_SPPROPERTY_SEARCH_RANGE_SYSTEM_DESC" default="inputbox">
+					<option value="inputbox">MOD_SPPROPERTY_SEARCH_RANGE_INPUTBOX</option>
+					<option value="range-slider">MOD_SPPROPERTY_SEARCH_RANGE_RANGE_SLIDER</option>
+					<option value="range-dropdown">MOD_SPPROPERTY_SEARCH_RANGE_DROPDOWN</option>
+				</field>
+				<field
+					name="price_range"
+					type="text"
+					label="MOD_SPPROPERTY_PROPERTY_PRICE_RANGE"
+					description="MOD_SPPROPERTY_PROPERTY_PRICE_RANGE_DESC" 
+					showon="ranger:range-dropdown"
+					default="10000"
+				/>
+				<field
+					name="size_range"
+					type="text"
+					label="MOD_SPPROPERTY_PROPERTY_SIZE_RANGE"
+					description="MOD_SPPROPERTY_PROPERTY_SIZE_RANGE_DESC" 
+					showon="ranger:range-dropdown"
+					default="500"
+				/>
+				<field type="spacer" name="spacer1" hr="true" />
+				<field name="show_advance" type="list" label="MOD_SPPROPERTY_SEARCH_SHOW_ADVANCE" description="MOD_SPPROPERTY_SEARCH_SHOW_ADVANCE_DESC" default="1">
+					<option value="1">MOD_SPPROPERTY_OPT_SHOW</option>
+					<option value="0">MOD_SPPROPERTY_OPT_HIDE</option>
+				</field>
+				<field name="show_keyword" type="list" label="MOD_SPPROPERTY_SEARCH_SHOW_KEYWORD" description="MOD_SPPROPERTY_SEARCH_SHOW_KEYWORD_DESC" default="1">
+					<option value="1">MOD_SPPROPERTY_OPT_SHOW</option>
+					<option value="0">MOD_SPPROPERTY_OPT_HIDE</option>
+				</field>
+
+				<field name="show_status" type="list" label="MOD_SPPROPERTY_SEARCH_SHOW_STATUS" description="MOD_SPPROPERTY_SEARCH_SHOW_STATUS_DESC" default="1">
+					<option value="1">MOD_SPPROPERTY_OPT_SHOW</option>
+					<option value="0">MOD_SPPROPERTY_OPT_HIDE</option>
+				</field>
+
+				<field name="show_location" type="list" label="MOD_SPPROPERTY_SEARCH_SHOW_LOCATION" description="MOD_SPPROPERTY_SEARCH_SHOW_LOCATION_DESC" default="1">
+					<option value="1">MOD_SPPROPERTY_OPT_SHOW</option>
+					<option value="0">MOD_SPPROPERTY_OPT_HIDE</option>
+				</field>
+
+				<field name="show_category" type="list" label="MOD_SPPROPERTY_SEARCH_SHOW_CATEGORY" description="MOD_SPPROPERTY_SEARCH_SHOW_CATEGORY_DESC" default="1">
+					<option value="1">MOD_SPPROPERTY_OPT_SHOW</option>
+					<option value="0">MOD_SPPROPERTY_OPT_HIDE</option>
+				</field>
+				
+				<field name="show_pricerange" type="list" label="MOD_SPPROPERTY_SEARCH_SHOW_PRICERANGE" description="MOD_SPPROPERTY_SEARCH_SHOW_PRICERANGE_DESC" default="1">
+					<option value="1">MOD_SPPROPERTY_OPT_SHOW</option>
+					<option value="0">MOD_SPPROPERTY_OPT_HIDE</option>
+				</field>
+				<field name="show_sizerange" type="list" label="MOD_SPPROPERTY_SEARCH_SHOW_SIZERANGE" description="MOD_SPPROPERTY_SEARCH_SHOW_SIZERANGE_DESC" default="1">
+					<option value="1">MOD_SPPROPERTY_OPT_SHOW</option>
+					<option value="0">MOD_SPPROPERTY_OPT_HIDE</option>
+				</field>
+				<field name="show_beds" type="list" label="MOD_SPPROPERTY_SEARCH_SHOW_BEDS" description="MOD_SPPROPERTY_SEARCH_SHOW_BEDS_DESC" default="1">
+					<option value="1">MOD_SPPROPERTY_OPT_SHOW</option>
+					<option value="0">MOD_SPPROPERTY_OPT_HIDE</option>
+				</field>
+				<field name="show_baths" type="list" label="MOD_SPPROPERTY_SEARCH_SHOW_BATHS" description="MOD_SPPROPERTY_SEARCH_SHOW_BATHS_DESC" default="1">
+					<option value="1">MOD_SPPROPERTY_OPT_SHOW</option>
+					<option value="0">MOD_SPPROPERTY_OPT_HIDE</option>
+				</field>
+				<field name="show_parking" type="list" label="MOD_SPPROPERTY_SEARCH_SHOW_PARKING" description="MOD_SPPROPERTY_SEARCH_SHOW_PARKING_DESC" default="1">
+					<option value="1">MOD_SPPROPERTY_OPT_SHOW</option>
+					<option value="0">MOD_SPPROPERTY_OPT_HIDE</option>
+				</field>
+				<field name="show_zipcode" type="list" label="MOD_SPPROPERTY_SEARCH_SHOW_ZIPCODE" description="MOD_SPPROPERTY_SEARCH_SHOW_ZIPCODE_DESC" default="1">
+					<option value="1">MOD_SPPROPERTY_OPT_SHOW</option>
+					<option value="0">MOD_SPPROPERTY_OPT_HIDE</option>
+				</field>
+				<field name="show_pfeatures" type="list" label="MOD_SPPROPERTY_SEARCH_SHOW_PFEATURES" description="MOD_SPPROPERTY_SEARCH_SHOW_PFEATURES_DESC" default="1">
+					<option value="1">MOD_SPPROPERTY_OPT_SHOW</option>
+					<option value="0">MOD_SPPROPERTY_OPT_HIDE</option>
+				</field>
+				<field name="show_lvlftno" type="list" label="MOD_SPPROPERTY_SEARCH_SHOW_FLAT_FLOOR_NUMBER" description="MOD_SPPROPERTY_SEARCH_SHOW_FLAT_FLOOR_NUMBER_DESC" default="1">
+					<option value="1">MOD_SPPROPERTY_OPT_SHOW</option>
+					<option value="0">MOD_SPPROPERTY_OPT_HIDE</option>
+				</field>
+				<field 
+				 	name="show_lvlftno_option" 
+					type="radio" 
+					class="btn-group btn-group-yesno"
+                    label="MOD_SPPROPERTY_SEARCH_SHOW_FLAT_FLOOR_NUMBER_OPTION" 
+                    description="MOD_SPPROPERTY_SEARCH_SHOW_FLAT_FLOOR_NUMBER_OPTION_DESC" 
+                    default="dropdown"
+					showon="show_lvlftno:1"
+				> 
+					<option value="input_field">MOD_SPPROPERTY_SEARCH_SHOW_FLAT_FLOOR_INPUT_FIELD</option>
+					<option value="dropdown">MOD_SPPROPERTY_SEARCH_SHOW_FLAT_FLOOR_DROPDOWN</option>
+				</field> 
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>

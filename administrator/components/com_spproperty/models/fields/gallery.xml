@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <field name="photo" type="media" class="image" label="COM_SPPROPERTY_FIELD_PROPERTY_IMAGE" heigh="50" width="20%" />
+    <field name="alt_text" type="text" label="COM_SPPROPERTY_FIELD_PROPERTY_IMAGE_ALT" size="50" />
+</form>

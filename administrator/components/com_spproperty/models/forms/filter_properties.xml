@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+    <fields name="filter">
+
+        <field name="search" type="text" label="COM_SPPROPERTY_SEARCH_LABEL" description="COM_SPPROPERTY_PROPERTY_SEARCH_DESC" hint="JSEARCH_FILTER" />
+
+        <field name="published" type="status" label="JOPTION_SELECT_PUBLISHED" description="JOPTION_SELECT_PUBLISHED_DESC" onchange="this.form.submit();">
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+        <field name="category" type="sql" label="some" description="" onchange="this.form.submit();" query="SELECT id, title FROM #__spproperty_categories WHERE published = 1 " key_field="id" value_field="title">
+            <option value="">JOPTION_SELECT_CATEGORY</option>
+        </field>
+        <field name="property_status" type="list" label="COM_SPPROPERTY_FIELD_PROPERTY_STATUS" onchange="this.form.submit();">
+            <option value="">COM_SPPROPERTY_SELECT_PROPERTY_STATUS</option>
+            <option value="rent">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_RENT</option>
+            <option value="sell">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_SELL</option>
+            <option value="in_hold">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_HOLD</option>
+            <option value="pending">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_PENDING</option>
+            <option value="sold">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_SOLD</option>
+            <option value="under_offer">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_UNDER_OFFER</option>
+        </field>
+        <field name="language" type="language" label="" description="" onchange="this.form.submit();">
+            <option value="">JOPTION_SELECT_LANGUAGE</option>
+            <option value="*">COM_SPPROPERTY_ALL_LANGUAGES</option>
+        </field>
+    </fields>
+
+    <fields name="list">
+
+        <field name="fullordering" type="list" label="COM_CONTACT_LIST_FULL_ORDERING" description="COM_CONTACT_LIST_FULL_ORDERING_DESC" default="a.name ASC" onchange="this.form.submit();">
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="a.ordering ASC">JGRID_HEADING_ORDERING_ASC</option>
+            <option value="a.ordering DESC">JGRID_HEADING_ORDERING_DESC</option>
+            <option value="a.published ASC">JSTATUS_ASC</option>
+            <option value="a.published DESC">JSTATUS_DESC</option>
+            <option value="a.featured ASC">JFEATURED_ASC</option>
+            <option value="a.featured DESC">JFEATURED_DESC</option>
+            <option value="a.title ASC">JGLOBAL_TITLE_ASC</option>
+            <option value="a.title DESC">JGLOBAL_TITLE_DESC</option>
+            <option value="a.spproperty_category_id ASC">JGRID_HEADING_ID_ASC</option>
+            <option value="a.spproperty_category_id DESC">JGRID_HEADING_ID_DESC</option>
+            <option value="a.created ASC">COM_SPPROPERTY_FIELD_CREATED_ON_ASC</option>
+            <option value="a.created DESC">COM_SPPROPERTY_FIELD_CREATED_ON_DESC</option>
+
+        </field>
+
+        <field name="limit" type="limitbox" label="COM_CONTACT_LIST_LIMIT" description="COM_CONTACT_LIST_LIMIT_DESC" default="25" class="input-mini" onchange="this.form.submit();" />
+    </fields>
+</form>

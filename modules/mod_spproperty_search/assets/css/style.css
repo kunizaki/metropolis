@@ -1,0 +1,274 @@
+/**
+* @package mod_spproperty_search
+* @author JoomShaper http://www.joomshaper.com
+* @copyright Copyright (c) 2010 - 2025 JoomShaper
+* @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 or later
+*/
+
+
+#sp-page-builder .empire-property-search {
+    position: relative;
+    z-index: 10 !important;
+}
+#sp-page-builder .empire-property-search:before {
+    content: '\f002';
+    background-color: #8cc641;
+    border: 7px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    font-family: FontAwesome;
+    font-size: 18px;
+    height: 54px;
+    left: 0;
+    margin: 0 auto;
+    padding-top: 7px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: -20px;
+    width: 54px;
+}
+#sp-page-builder .empire-property-search .sppb-section-title {
+    margin-bottom: 12px;
+}
+#sp-page-builder .empire-property-search .sppb-section-title .sppb-title-heading {
+    font-size: 18px;
+    font-weight: 400;
+}
+#sp-page-builder .empire-property-search .sp-property-search .property-advance-search {
+    line-height: 1;
+}
+#sp-page-builder .empire-property-search .sp-property-search .property-advance-search a {
+    font-size: 14px;
+}
+#sp-page-builder .empire-property-search .sp-property-search .property-advance-search a i {
+    color: #8cc641;
+    transition: .4s;
+}
+#sp-page-builder .empire-property-search .sp-property-search .property-advance-search a span {
+    display: inline-block;
+    color: #8c8c8c;
+    padding-left: 5px;
+    transition: .4s;
+}
+#sp-page-builder .empire-property-search .sp-property-search .property-advance-search a:hover i,
+#sp-page-builder .empire-property-search .sp-property-search .property-advance-search a:focus i,
+#sp-page-builder .empire-property-search .sp-property-search .property-advance-search a:active i {
+    color: #8c8c8c;
+}
+#sp-page-builder .empire-property-search .sp-property-search .property-advance-search a:hover span,
+#sp-page-builder .empire-property-search .sp-property-search .property-advance-search a:focus span,
+#sp-page-builder .empire-property-search .sp-property-search .property-advance-search a:active span {
+    color: #8cc641;
+}
+.sp-property-search.property-search .property-search-button button.sppb-btn,
+.sp-property-search.property-search .property-search-button button.btn {
+    padding: 0 30px;
+}
+.empire-property-search .spproperty-adv-search select,.empire-property-search .spproperty-search select{
+    padding: 6px 18px;
+    -webkit-appearance:none;
+}
+/* *************   START Advance Search  *************** */
+/* **************************************************** */
+
+.modal-dialog.modal-lg {
+    width: 1200px;
+    margin: 0 auto;
+}
+.modal-dialog.modal-lg .modal-content {
+    border: 0 none;
+    border-radius: 0;
+    box-shadow: none;
+}
+.sppb-addon-content div.modal.fade.in {
+    top: 0;
+}
+.sp-advaced-search .sp-advance-search-wrap {
+    position: relative;
+    padding: 35px 15px 45px;
+}
+.sp-advaced-search .sp-advance-search-wrap .sp-advance-icon {
+    background-color: #8cc641;
+    border: 7px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 18px;
+    height: 54px;
+    left: 0;
+    margin: 0 auto;
+    padding-top: 9px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: -20px;
+    width: 54px;
+}
+.sp-advaced-search .sp-advance-search-wrap .sp-advance-serach-title h4 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 36px;
+    margin-bottom: 17px;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+.sp-advaced-search .sp-advance-search-wrap span.close {
+    background: #8cc641;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    height: 28px;
+    left: auto;
+    opacity: 1;
+    padding-top: 2px;
+    position: absolute;
+    right: -28px;
+    text-align: center;
+    top: -14px;
+    width: 28px;
+}
+.sp-advaced-search .sp-advance-search-wrap .property-search-button {
+    margin-top: 30px;
+}
+.sp-advaced-search .sp-advance-search-wrap input {
+    width: 100%;
+}
+.modal {
+    text-align: center;
+    padding: 0!important;
+}
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+}
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+.sp-advaced-search .sp-property-search-button-wrap .property-search-button {
+    float: right;
+    margin-right: 15px;
+}
+
+.sp-advaced-search .sp-property-search-button-wrap .property-search-button:first-child {
+    margin-right: 0px;
+}
+
+.sp-advaced-search .sp-property-search-button-wrap .property-search-button button{
+    padding: 15px 30px !important;
+}
+
+.spproperty-adv-search .row:not(:first-child) {
+    margin-bottom: 15px;
+}
+
+.spproperty-search-advance {
+    display: none;
+}
+
+
+.chzn-contaner {
+    width: 100% !important;
+}
+
+.chzn-container-multi .chzn-choices {
+    display: block !important;
+    min-height: 34px !important;
+    padding: 6px 12px !important;
+    font-size: 14px !important;
+    line-height: 1.428571429 !important;
+    color: #555555 !important;
+    background-color: #fff !important;
+    background-image: none !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+    -webkit-transition: border-color ease-in-out .15s,
+    box-shadow ease-in-out .15s !important;
+    -o-transition: border-color ease-in-out .15s,
+    box-shadow ease-in-out .15s !important;
+    transition: border-color ease-in-out .15s,
+    box-shadow ease-in-out .15s !important;
+    border-radius: 3px !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+
+    padding: 6px 18px !important;
+    border-color: #f1f2f3 !important;
+    font-size: 16px !important;
+    background-color: #fff !important;
+
+}
+
+.chzn-container-multi .chzn-choices .search-field, .chzn-container-multi .chzn-choices .search-field input {
+    width: 100%!important;
+}
+
+
+.chzn-container-multi .chzn-choices li.search-choice {
+    border: 1px solid #f9f1f1 !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    box-shadow: none!important;
+    color: #acafb0 !important;
+    line-height: 16px;
+    cursor: default;
+}
+.chzn-container.chzn-container-multi input[type="text"] {
+    height: 30px !important;
+}
+ .chzn-container-multi .chzn-choices li.search-field input[type="text"] {
+     font-size: 80% !important;
+ }
+
+ /*Designing noUiSlider customizly*/
+ .noUi-horizontal {
+    height: 2px;
+    background: #cecece;
+ }
+
+ .noUi-target {
+    border: none!important;
+    box-shadow: none!important;
+ }
+
+ .noUi-connect {
+     background:#97cd4a;
+ }
+ .noUi-horizontal .noUi-handle {
+    width: 15px;
+    height: 15px;
+    top: -7px;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    background: #97cd4a;
+    box-shadow: none;
+ }
+
+ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
+    right: -10px!important;
+ }
+
+ .noUi-handle:before,
+ .noUi-handle:after {
+     content: none;
+ }
+
+ .noUi-tooltip {
+     display: none;
+ }
+
+ .noUi-active .noUi-tooltip {
+     display: block;
+ }
+
+/* **************   END:: Advance Search  *************** */
+/* **************************************************** */

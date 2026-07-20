@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="component" method="upgrade">
+	<name>SP Author Archive</name>
+	<creationDate>Sep 2018</creationDate>
+	<author>JoomShaper</author>
+	<authorEmail>support@joomshaper.com</authorEmail>
+	<authorUrl>http://www.joomshaper.com</authorUrl>
+	<copyright>Copyright (c) 2010- 2021 JoomShaper. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<version>2.0.0</version>
+	<description>SP Author Archive Component for Joomla 3.4+</description>
+	<scriptfile>installer.script.php</scriptfile>
+
+	<updateservers>
+		<server type="extension" priority="1" name="sp_authorarchive">https://www.joomshaper.com/updates/com-sp-authorarchive.xml</server>
+	</updateservers>
+
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>router.php</filename>
+		<filename>spauthorarchive.php</filename>
+		<folder>assets</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>layouts</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+
+	<languages folder="language/site">
+		<language tag="en-GB">en-GB/en-GB.com_spauthorarchive.ini</language>
+	</languages>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install/mysql/install.sql</file>
+			<file driver="mysqli">sql/install/mysql/install.sql</file>
+		</sql>
+	</install>
+
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+			<schemapath type="mysqli">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<administration>
+		<files folder="admin">
+			<folder>sql</folder>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>spauthorarchive.php</filename>
+		</files>
+
+		<languages folder="language/admin">
+			<language tag="en-GB">en-GB/en-GB.com_spauthorarchive.sys.ini</language>
+		</languages>
+	</administration>
+
+</extension>

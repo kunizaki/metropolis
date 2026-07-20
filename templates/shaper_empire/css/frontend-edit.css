@@ -1,0 +1,177 @@
+.layout-edit .btn-toolbar {
+  margin-bottom: 20px;
+}
+.layout-edit .tab-content {
+  padding-top: 20px;
+}
+.layout-edit #editor-xtd-buttons,
+.layout-edit .toggle-editor {
+  margin-top: 20px;
+}
+.layout-edit .btn-group input[type="radio"] {
+  display: none;
+}
+.jviewport-height10 {
+  height: 10vh;
+}
+.jviewport-height20 {
+  height: 20vh;
+}
+.jviewport-height30 {
+  height: 30vh;
+}
+.jviewport-height40 {
+  height: 40vh;
+}
+.jviewport-height50 {
+  height: 50vh;
+}
+.jviewport-height60 {
+  height: 60vh;
+}
+.jviewport-height70 {
+  height: 70vh;
+}
+.jviewport-height80 {
+  height: 80vh;
+}
+.jviewport-height90 {
+  height: 90vh;
+}
+.jviewport-height100 {
+  height: 100vh;
+}
+[class*=jviewport-height] iframe {
+  height: 100%;
+}
+.modal-dialog .jviewport-width10 {
+  width: 10vw;
+}
+.modal-dialog .jviewport-width20 {
+  width: 20vw;
+  max-width: none;
+}
+.modal-dialog .jviewport-width30 {
+  width: 30vw;
+  max-width: none;
+}
+.modal-dialog .jviewport-width40 {
+  width: 40vw;
+  max-width: none;
+}
+.modal-dialog .jviewport-width50 {
+  width: 50vw;
+  max-width: none;
+}
+.modal-dialog .jviewport-width60 {
+  width: 60vw;
+  max-width: none;
+}
+.modal-dialog .jviewport-width70 {
+  width: 70vw;
+  max-width: none;
+}
+.modal-dialog .jviewport-width80 {
+  width: 80vw;
+  max-width: none;
+}
+.modal-dialog .jviewport-width90 {
+  width: 90vw;
+  max-width: none;
+}
+.modal-dialog .jviewport-width100 {
+  width: 100vw;
+  max-width: none;
+}
+iframe,
+svg {
+  max-width: 100%;
+}
+#sbox-content > iframe {
+  height: 100%;
+}
+.alert.alert-message {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+}
+.alert.alert-message h4 {
+  color: #468847;
+}
+.manager.thumbnails {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 -20px;
+}
+.manager.thumbnails li {
+  text-align: center;
+  display: block;
+  float: left;
+  width: 80px;
+  height: 80px;
+  line-height: 18px;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+  position: relative;
+}
+.manager.thumbnails li [class^="icon-"],
+.manager.thumbnails li [class*=" icon-"] {
+  font-size: 14px;
+  line-height: 14px;
+  color: #08c;
+  display: inline-block;
+  margin-top: 6px;
+}
+.manager.thumbnails li .height-50 {
+  margin-top: 4px;
+  height: 50px;
+  margin-bottom: 4px;
+}
+.manager.thumbnails li a {
+  text-decoration: none;
+  color: #08c;
+  font-size: 13px;
+}
+.manager.thumbnails li:hover {
+  background: #f7fcff;
+  border-color: rgba(82,168,236,0.8);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(82,168,236,0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(82,168,236,0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(82,168,236,0.6);
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+.chzn-container.chzn-container-multi input[type="text"] {
+  min-height: 30px;
+}
+#mailto-window {
+  margin: 20px;
+}
+#mailto-window > h2 {
+  font-size: 18px;
+  margin-top: 0;
+}
+#mailto-window input[type="text"],
+#mailto-window input[type="email"] {
+  height: auto !important;
+}
+.com-config .form-horizontal .accordion-body {
+  overflow: hidden;
+}
+.com-config .form-horizontal .accordion-body.in:hover {
+  overflow: visible;
+}
+.com-config .form-horizontal .accordion-body .input-prepend.input-append .media-preview.add-on {
+  height: 34px;
+  line-height: 26px;
+}
+.com-config .form-horizontal .accordion-body .input-prepend.input-append .btn {
+  position: relative;
+  cursor: pointer;
+  color: #333;
+  border: 1px solid #bbb;
+}

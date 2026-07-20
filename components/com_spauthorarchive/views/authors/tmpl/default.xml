@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<fields name="params">
+		<fieldset name="basic" label="COM_SPAUTHORARCHIVE_FIELDSET_AUTHORS">
+			<field name="ordering" type="list" class="btn-group" default="0" label="COM_SPAUTHORARCHIVE_ORDERING" description="COM_SPAUTHORARCHIVE_ORDERING_DESC">
+				<option value="reg-asc">COM_SPAUTHORARCHIVE_ORDER_REG_ASCENDING</option>
+				<option value="reg-desc">COM_SPAUTHORARCHIVE_ORDER_REG_DESCENDING</option>
+				<option value="name-asc">COM_SPAUTHORARCHIVE_ORDER_NAME_ASCENDING</option>
+				<option value="name-desc">COM_SPAUTHORARCHIVE_ORDER_NAME_DESCENDING</option>
+			</field>
+
+			<field name="columns" type="list" default="3" label="COM_SPAUTHORARCHIVE_FIELD_COLUMNS" description="COM_SPAUTHORARCHIVE_FIELD_COLUMNS_DESC">
+				<option value="2">COM_SPAUTHORARCHIVE_FIELD_LAYOUT_COLUMNS_2</option>
+				<option value="3">COM_SPAUTHORARCHIVE_FIELD_LAYOUT_COLUMNS_3</option>
+				<option value="4">COM_SPAUTHORARCHIVE_FIELD_LAYOUT_COLUMNS_4</option>
+				<option value="6">COM_SPAUTHORARCHIVE_FIELD_LAYOUT_COLUMNS_6</option>
+			</field>
+
+			<field name="show_desc" type="radio" class="btn-group" default="1" label="COM_SPAUTHORARCHIVE_SHOW_DESCRIPTION" description="COM_SPAUTHORARCHIVE_SHOW_DESCRIPTION_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+			</field>
+			
+			<!-- Author' article settings -->
+			<field name="art_articles_spacer" type="spacer" label="COM_SPAUTHORARCHIVE_FIELD_ARTICLE_SPACER" />
+			<field name="art_ordering" type="list" class="btn-group" default="latest" label="COM_SPAUTHORARCHIVE_ARTICLE_ORDERING" description="COM_SPAUTHORARCHIVE_ARTICLE_ORDERING_DESC">
+				<option value="latest">COM_SPAUTHORARCHIVE_ORDER_LATEST</option>
+				<option value="oldest">COM_SPAUTHORARCHIVE_ORDER_OLDEST</option>
+				<option value="hits">COM_SPAUTHORARCHIVE_ORDER_HITS</option>
+				<option value="featured">COM_SPAUTHORARCHIVE_ORDER_FEATURED</option>
+				<option value="alphabet_asc">COM_SPAUTHORARCHIVE_ORDER_ALPHABET_ASC</option>
+				<option value="alphabet_desc">COM_SPAUTHORARCHIVE_ORDER_ALPHABET_DESC</option>
+				<option value="random">COM_SPAUTHORARCHIVE_ORDER_RANDOM</option>
+			</field>
+			<field name="art_columns" type="list" default="3" label="COM_SPAUTHORARCHIVE_FIELD_COLUMNS" description="COM_SPAUTHORARCHIVE_FIELD_COLUMNS_DESC">
+				<option value="2">COM_SPAUTHORARCHIVE_FIELD_LAYOUT_COLUMNS_2</option>
+				<option value="3">COM_SPAUTHORARCHIVE_FIELD_LAYOUT_COLUMNS_3</option>
+				<option value="4">COM_SPAUTHORARCHIVE_FIELD_LAYOUT_COLUMNS_4</option>
+				<option value="6">COM_SPAUTHORARCHIVE_FIELD_LAYOUT_COLUMNS_6</option>
+			</field>
+			<field name="art_show_thumbnail" type="radio" class="btn-group" default="1" label="COM_SPAUTHORARCHIVE_SHOW_THUMBNAIL" description="COM_SPAUTHORARCHIVE_SHOW_THUMBNAIL_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="art_show_intro" type="radio" class="btn-group" default="1" label="COM_SPAUTHORARCHIVE_SHOW_INTRO" description="COM_SPAUTHORARCHIVE_SHOW_INTRO_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="limit" type="number" default="6" label="COM_SPAUTHORARCHIVE_FIELD_LIMIT" description="COM_SPAUTHORARCHIVE_FIELD_LIMIT_DESC" />
+			<field name="intro_txt_limit" type="number" default="100" label="COM_SPAUTHORARCHIVE_FIELD_ARTICLE_INTROTXT_LIMIT" description="COM_SPAUTHORARCHIVE_FIELD_ARTICLE_INTROTXT_LIMIT_DESC" />
+			<!-- <field name="art_intro_limit" type="number" default="250" label="COM_SPAUTHORARCHIVE_FIELD_INTRO_LIMIT" description="COM_SPAUTHORARCHIVE_FIELD_INTRO_LIMIT_DESC" /> -->
+			<field name="art_readmore_text" type="text" label="COM_SPAUTHORARCHIVE_FIELD_READMORE_TXT" description="COM_SPAUTHORARCHIVE_FIELD_READMORE_TXT_DESC" />
+
+		</fieldset>
+	</fields>
+</metadata>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <fields name="params" addfieldpath="/components/com_spproperty/fields">
+        <fieldset name="basic" label="COM_SPPROPERTY_MENUSET_GALLERIES">
+            <field name="catid" type="spcats" default="" label="COM_SPPROPERTY_FIELD_SELECT_CATEGORY" description="COM_SPPROPERTY_FIELD_SELECT_CATEGORY_DESC" />
+            <field name="property_status" type="list" label="COM_SPPROPERTY_FIELD_PROPERTY_STATUS" description="COM_SPPROPERTY_FIELD_PROPERTY_STATUS_DESC">
+                <option value="">JALL</option>
+                <option value="rent">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_RENT</option>
+                <option value="sell">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_SELL</option>
+                <option value="in_hold">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_HOLD</option>
+                <option value="pending">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_PENDING</option>
+                <option value="sold">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_SOLD</option>
+                <option value="under_offer">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_UNDER_OFFER</option>
+            </field>
+            <field name="agentid" type="spagent" default="" label="COM_SPPROPERTY_FIELD_SELECT_AGENT" description="COM_SPPROPERTY_FIELD_SELECT_AGENT_DESC"/>
+            <field name="order_by" type="list" default="" label="COM_SPPROPERTY_FIELD_ORDER" description="COM_SPPROPERTY_FIELD_ORDER_BY_DESC">
+                <option value="desc">COM_SPPROPERTY_FIELD_DESC</option>
+                <option value="asc">COM_SPPROPERTY_FIELD_ASC</option>
+                <option value="featured">COM_SPPROPERTY_FIELD_FEATURED</option>
+            </field>
+            <field name="limit" type="text" label="COM_SPPROPERTY_GALLERIES_LIMIT" description="COM_SPPROPERTY_GALLERIES_LIMIT_DESC" />
+            <field name="columns" type="list" label="COM_SPPROPERTY_GALLERIES_COLUMNS" description="COM_SPPROPERTY_GALLERIES_COLUMNS_DESC" default="3">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </field>
+
+            <field name="gallery_style" type="list" label="COM_SPPROPERTY_GALLERY_STYLE" description="COM_SPPROPERTY_GALLERY_STYLE_DESC" default="masonry">
+                <option value="masonry">COM_SPPROPERTY_GALLERY_STYLE_MASONARY</option>
+                <option value="rectangle">COM_SPPROPERTY_GALLERY_STYLE_RECT</option>
+            </field>
+
+        </fieldset>
+    </fields>
+</metadata>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form validate="true" serverside_validate="true" tabbed="1" addfieldpath="/administrator/components/com_spproperty/fields">
+
+	<fieldset name="basic" class="tab-pane active"  label="COM_SPPROPERTY_FIELDSET_BASIC">
+
+		<field name="title"
+			type="text"
+			label="COM_SPPROPERTY_FIELD_TITLE"
+			required="true"
+			size="50"
+		/>
+
+		<field name="slug"
+			type="text"
+			label="COM_SPPROPERTY_FIELD_ALIAS"
+			size="50"
+		/>
+
+		<field
+    	name="spproperty_category_id"
+ 			type="sql"
+    	translate="false"
+    	query="SELECT spproperty_category_id, title FROM #__spproperty_categories WHERE enabled = 1"
+    	key_field="spproperty_category_id"
+    	value_field="title"
+    	label="COM_SPPROPERTY_FIELD_CATEGORY"
+    	description="COM_SPPROPERTY_FIELD_CATEGORY_DESC"
+    />
+
+		<field name="property_status" type="list" label="COM_SPPROPERTY_FIELD_PROPERTY_STATUS" description="COM_SPPROPERTY_FIELD_PROPERTY_STATUS_DESC">
+			<option value="rent">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_RENT</option>
+			<option value="sell">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_SELL</option>
+			<option value="in_hold">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_HOLD</option>
+			<option value="pending">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_PENDING</option>
+			<option value="sold">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_SOLD</option>
+			<option value="under_offer">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_UNDER_OFFER</option>
+		</field>
+
+    <field name="featured"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_SPPROPERTY_FIELD_FEATURED"
+			description="COM_SPPROPERTY_FIELD_FEATURED_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="price"
+			type="number"
+			label="COM_SPPROPERTY_FIELD_PROPERTY_PRICE"
+			required="true"
+			size="50"
+		/>
+
+		<field
+        	name="spproperty_agent_id"
+		 	type="sql"
+        	translate="false"
+        	query="SELECT spproperty_agent_id, title FROM #__spproperty_agents WHERE enabled = 1"
+        	key_field="spproperty_agent_id"
+        	value_field="title"
+        	label="COM_SPPROPERTY_FIELD_AGENT"
+        	description="COM_SPPROPERTY_FIELD_AGENT_DESC"
+        />
+
+		 <field name="description"
+			type="editor"
+			class="inputbox"
+			label="COM_SPPROPERTY_FIELD_FULL_DESC"
+			required="true"
+			width="300"
+			filter="JComponentHelper::filterText"
+		 />
+
+		 <field name="image"
+		 	type="media"
+		 	class="image"
+		 	label="COM_SPPROPERTY_FIELD_IMAGE"
+		 	heigh="50"
+		 	width="20%"
+		/>
+
+		<field name="gallery" type="subform"
+    formsource="/administrator/components/com_spproperty/fields/gallery.xml" multiple="true"
+    label="COM_SPPROPERTY_FIELD_GALLERY" description="COM_SPPROPERTY_FIELD_GALLERY_DESC" />
+
+		<field name="map"
+		 type="gmap"
+		 label="COM_SPPROPERTY_FIELD_ADDRESS_MAP"
+		 default="40.7324319, -73.82480799999996"
+		 required="true"
+	 />
+
+	</fieldset>
+
+	<fieldset name="location" label="COM_SPPROPERTY_FIELDSET_LOCATION" class="tab-pane">=
+
+		<field name="country"
+    	type="spcountries"
+    	label="COM_SPPROPERTY_FIELD_COUNTRY"
+    	description="COM_SPPROPERTY_FIELD_COUNTRY_DESC"
+    />
+
+  	<field name="city"
+			type="text"
+			label="COM_SPPROPERTY_FIELD_CITY"
+			size="50"
+		/>
+
+		<field name="address"
+			type="textarea"
+			class="inputbox"
+			label="COM_SPPROPERTY_FIELD_ADDRESS"
+			width="300"
+			filter="JComponentHelper::filterText"
+		 />
+
+		 <field name="zip"
+			type="text"
+			label="COM_SPPROPERTY_FIELD_ZIP_CODE"
+			size="50"
+		/>
+
+	</fieldset> <!-- / location -->
+
+	<fieldset name="details" label="COM_SPPROPERTY_FIELDSET_DETAILS" class="tab-pane">
+
+		<field name="psize"
+			type="number"
+			label="COM_SPPROPERTY_FIELD_PSIZE_SFT"
+			description="COM_SPPROPERTY_FIELD_PSIZE_SFT_DETAILS"
+			size="50"
+		/>
+
+		<field name="beds"
+			type="number"
+			label="COM_SPPROPERTY_FIELD_BEDS"
+			description="COM_SPPROPERTY_FIELD_BEDS_DETAILS"
+			size="50"
+		/>
+
+		<field name="baths"
+			type="number"
+			label="COM_SPPROPERTY_FIELD_BATHS"
+			description="COM_SPPROPERTY_FIELD_BATHS_DETAILS"
+			size="50"
+		/>
+
+		<field name="garages"
+			type="number"
+			label="COM_SPPROPERTY_FIELD_GARAGES"
+			description="COM_SPPROPERTY_FIELD_GARAGES_DETAILS"
+			size="50"
+		/>
+
+		<field name="lvl_fltno"
+			type="text"
+			label="COM_SPPROPERTY_FIELD_FLOOR_FLAT_NO"
+			description="COM_SPPROPERTY_FIELD_FLOOR_FLAT_NO_DETAILS"
+			size="50"
+		/>
+
+		<field name="building_year"
+			type="text"
+			label="COM_SPPROPERTY_FIELD_BUILDING_YEAR"
+			description="COM_SPPROPERTY_FIELD_BUILDING_YEAR_DETAILS"
+			size="50"
+		/>
+
+		<field name="features_text"
+			type="textarea"
+			class="inputbox"
+			label="COM_SPPROPERTY_FIELD_FEATURES_TEXT"
+			width="300"
+			filter="JComponentHelper::filterText"
+		 />
+
+		<field name="features"
+			type="spfeatures"
+			label="COM_SPPROPERTY_FIELD_FEATURES_TEXT"
+		 />
+
+		 <field name="video_text"
+			type="textarea"
+			class="inputbox"
+			label="COM_SPPROPERTY_FIELD_VIDEO_TEXT"
+			width="300"
+			filter="JComponentHelper::filterText"
+		 />
+
+		<field name="video"
+			type="text"
+			label="COM_SPPROPERTY_FIELD_VIDEO_URL"
+			size="50"
+		/>
+
+		<field name="fp_text"
+			type="textarea"
+			class="inputbox"
+			label="COM_SPPROPERTY_FIELD_FLOORPLAN_TEXT"
+			width="300"
+			filter="JComponentHelper::filterText"
+		 />
+
+		 <field name="floor_plans" type="subform"
+		    formsource="/administrator/components/com_spproperty/fields/floorplans.xml" multiple="true"
+		    label="COM_SPPROPERTY_FIELD_FLOOR_PLANS" description="COM_SPPROPERTY_FIELD_FLOOR_PLANS_DESC" />
+
+		 <!-- <field name="floor_plans" type="repeatable" icon="list" label="COM_SPPROPERTY_FIELD_FLOOR_PLANS" description="COM_SPPROPERTY_FIELD_FLOOR_PLANS_DESC">
+        	<fields name="params">
+				<fieldset hidden="true" name="honours" repeat="true">
+
+					<field name="img"
+						type="media"
+						class="image"
+						label="COM_SPPROPERTY_FIELD_FLOOR_IMAGE"
+						description="COM_SPPROPERTY_FIELD_FLOOR_IMAGE_DESC"
+						heigh="50"
+						width="20%"
+					/>
+
+					<field name="layout_name"
+						type="text"
+						label="COM_SPPROPERTY_FIELD_FLOOR_PLAN_LAYOUT_NAME"
+						size="50"
+					/>
+
+					<field name="text"
+						type="textarea"
+						label="COM_SPPROPERTY_FIELD_FLOOR_PLAN_TEXT"
+						size="50"
+					/>
+
+				</fieldset>
+			</fields>
+		</field> -->
+
+	</fieldset> <!-- / details -->
+
+	<fieldset name="options" label="COM_SPPROPERTY_FIELDSET_OPTIONS" class="tab-pane">
+		<field name="enabled" type="list" label="JSTATUS" labelclass="hello-label" class="chzn-color-state" filter="intval" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		<field name="created_on" type="calendar" label="COM_SPPROPERTY_FIELD_CREATED_ON"/>
+		<field name="created_by" type="user" label="COM_SPPROPERTY_FIELD_CREATED_BY"/>
+		<field name="language" type="language" label="COM_SPPROPERTY_FIELD_LANGUAGE">
+			<option value="*">COM_SPPROPERTY_ALL_LANGUAGES</option>
+		</field>
+		<field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" />
+	</fieldset>
+</form>

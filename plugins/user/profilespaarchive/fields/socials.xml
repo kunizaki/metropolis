@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <field name="social_name"
+      type="list"
+      label="PLG_USER_PROFILESPAARCHIVE_SOCIAL_NAME">
+      <option value="facebook">PLG_USER_PROFILESPAARCHIVE_SOCIAL_NAME_FACEBOOK</option>
+      <option value="twitter">PLG_USER_PROFILESPAARCHIVE_SOCIAL_NAME_TWITTER</option>
+      <option value="google-plus">PLG_USER_PROFILESPAARCHIVE_SOCIAL_NAME_GPLUS</option>
+      <option value="linkedin">PLG_USER_PROFILESPAARCHIVE_SOCIAL_NAME_LINKEDIN</option>
+      <option value="pinterest">PLG_USER_PROFILESPAARCHIVE_SOCIAL_NAME_PINTEREST</option>
+      <option value="youtube">PLG_USER_PROFILESPAARCHIVE_SOCIAL_NAME_YOUTUBE</option>
+      <option value="vk">PLG_USER_PROFILESPAARCHIVE_SOCIAL_NAME_VK</option>
+  </field>
+
+  <field name="social_url"
+   type="inputbox"
+   label="PLG_USER_PROFILESPAARCHIVE_SOCIAL_URL"
+  />
+  
+</form>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<fields name="params">
+		<fieldset name="basic" label="COM_SPPROPERTY_MENUSET_AGENTS">
+			<field name="agent_selection_type" type="list" label="COM_SPPROPERTY_AGENT_SELECTION_TYPE" description="COM_SPPROPERTY_AGENT_SELECTION_TYPE_DESC" default="1">
+				<option value="0">JALL</option>
+				<option value="1">COM_SPPROPERTY_AGENTS_AUTO</option>
+				<option value="2">COM_SPPROPERTY_AGENTS_CUSTOM</option>
+				<option value="3">COM_SPPROPERTY_AGENTS_FEATURED</option>
+			</field>
+
+			<field name="selected_agents" label="Select Agents" type="sql" query="SELECT title, id FROM #__spproperty_agents WHERE published = 1" key_field="id" value_field="title" multiple="true" showon="agent_selection_type:2" />
+			
+			<field name="order_by" type="list" label="COM_SPPROPERTY_AGENTS_ORDERING" description="COM_SPPROPERTY_AGENTS_ORDERING_DESC" default="asc" showon="agent_selection_type!:1">
+				<option value="asc">COM_SPPROPERTY_AGENT_ORDERING_ASC</option>
+				<option value="desc">COM_SPPROPERTY_AGENT_ORDERING_DESC</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

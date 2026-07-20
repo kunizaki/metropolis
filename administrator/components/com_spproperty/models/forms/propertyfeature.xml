@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <fieldset name="basic">
+        <field name="id" type="hidden" />
+        <field name="title" type="text" label="JGLOBAL_TITLE" description="JFIELD_TITLE_DESC" class="inputbox" required="true" />
+        <field name="alias" type="text" id="alias" label="JFIELD_ALIAS_LABEL" description="JFIELD_ALIAS_DESC" hint="JFIELD_ALIAS_PLACEHOLDER" size="40" />
+        <field name="icon_type" type="list" label="COM_SPPROPERTY_SHOW_ICON_IMAGE" description="COM_SPLMS_SHOW_FIELD_DESC" class="btn-group" default="1" onchange="">
+            <option value="1">COM_SPPROPERTY_FIELD_IMAGE</option>
+            <option value="3">COM_SPPROPERTY_FIELD_FA_ICON</option>
+            <option value="2">COM_SPPROPERTY_FIELD_PROPERTY_ICON</option>
+            <option value="0">COM_SPPROPERTY_FIELD_CUSTOM_ICON</option>
+        </field>
+        <field name="image" type="media" label="COM_SPPROPERTY_FIELD_IMAGE" description="COM_SPPROPERTY_FIELD_IMAGE" showon="icon_type:1" />
+        <field name="icon_fa" type="faicons" label="COM_SPPROPERTY_FIELD_ICON_FA" description="COM_SPPROPERTY_FIELD_ICON_FA_DESC" showon="icon_type:3" />
+        <field name="icon_sp" type="spicons" label="COM_SPPROPERTY_FIELD_ICON_SP" description="COM_SPPROPERTY_FIELD_ICON_SP_DESC" showon="icon_type:2" />
+        <field name="icon" type="text" label="COM_SPPROPERTY_FIELD_ICON" description="COM_SPPROPERTY_FIELD_ICON_DESC" showon="icon_type:0" />
+        <field name="published" type="list" label="COM_SPPROPERTY_COMMON_STATUS" labelclass="hello-label" class="chzn-color-state" filter="intval" size="1" default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+        <field name="created_by" type="user" label="COM_SPPROPERTY_FIELD_CREATED_BY"/>
+        <field name="created" type="calendar" label="COM_SPPROPERTY_FIELD_CREATED_ON" translateformat="true" />
+        <field name="language" type="language" label="COM_SPPROPERTY_FIELD_LANGUAGE">
+            <option value="*">COM_SPPROPERTY_ALL_LANGUAGES</option>
+        </field>
+        <field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" />
+    </fieldset>
+</form>
+	

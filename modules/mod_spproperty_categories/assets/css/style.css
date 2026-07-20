@@ -1,0 +1,20 @@
+/**
+* @package mod_spproperty_categories
+* @author JoomShaper http://www.joomshaper.com
+* @copyright Copyright (c) 2010 - 2025 JoomShaper
+* @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 or later
+*/
+
+.spproperty-list .item a {
+    color: #000;
+    font-weight: 700;
+}
+
+.spproperty-list a:hover,
+.spproperty-list a:focus {
+    color: #8cc641;
+}
+
+.spproperty-list .item {
+    margin-bottom: 20px;
+}

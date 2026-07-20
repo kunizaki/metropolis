@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <fieldset name="basic">
+        <field name="id" type="text" readonly="true" label="COM_SPPROPERTY_FIELD_REQUEST_ID" />
+        <field name="property_id" type="sql" query="SELECT title, id FROM #__spproperty_properties WHERE published = 1 ORDER BY title ASC" label="COM_SPPROPERTY_FIELD_PROPERTY" description="COM_SPPROPERTY_FIELD_PROPERTY" key_field="id" value_field="title" required="true" layout="joomla.form.field.list-fancy-select"/>
+        <field name="type" type="list" label="COM_SPPROPERTY_REQUEST_TYPE">
+            <option value="visit">COM_SPPROPERTY_VISIT_REQUEST</option>
+            <option value="price">COM_SPPROPERTY_PRICE_REQUEST</option>
+        </field>
+        <field name="created_by" type="user" label="COM_SPPROPERTY_FIELD_REQUEST_USER" description="COM_SPPROPERTY_FIELD_REQUEST_USER_DESC" />
+        <field name="created" type="calendar" label="COM_SPPROPERTY_FIELD_REQUEST_TIME" description="COM_SPPROPERTY_FIELD_REQUEST_TIME_DESC" translateformat="true" />
+        <field name="visitor_ip" type="text" label="COM_SPPROPERTY_FIELD_CUSTOMER_IP" description="COM_SPPROPERTY_FIELD_CUSTOMER_IP" />
+        <field name="customer_name" type="text" label="COM_SPPROPERTY_FIELD_CUSTOMER_NAME" description="COM_SPPROPERTY_FIELD_CUSTOMER_NAME" required="true" />
+        <field name="customer_email" type="email" label="COM_SPPROPERTY_FIELD_CUSTOMER_EMAIL" description="COM_SPPROPERTY_FIELD_CUSTOMER_EMAIL" />
+        <field name="customer_phone" type="text" label="COM_SPPROPERTY_FIELD_CUSTOMER_PHONE" description="COM_SPPROPERTY_FIELD_CUSTOMER_PHONE" />
+        <field name="customer_comments" type="textarea" rows="2" label="COM_SPPROPERTY_FIELD_CUSTOMER_COMMENTS" description="COM_SPPROPERTY_FIELD_CUSTOMER_COMMENTS" />
+        <field name="published" type="list" label="COM_SPPROPERTY_COMMON_STATUS" labelclass="hello-label" class="chzn-color-state" filter="intval" size="1" default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+
+    </fieldset>
+</form>
+	

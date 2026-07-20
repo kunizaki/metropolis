@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.6" client="site" method="upgrade">
+    <name>SP Property Agents</name>
+    <author>JoomShaper.com</author>
+    <creationDate>September 2018</creationDate>
+    <copyright>Copyright (C) 2010 - 2018 JoomShaper. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later;</license>
+    <authorEmail>support@joomshaper.com</authorEmail>
+    <authorUrl>www.joomshaper.com</authorUrl>
+    <version>4.1.1</version>
+    <description>SP Property Agents</description>
+    <files>
+        <filename module="mod_spproperty_agents">mod_spproperty_agents.php</filename>
+        <folder>assets</folder>
+        <folder>tmpl</folder>
+    </files>
+
+    <languages>
+        <language tag="en-GB">en-GB.mod_spproperty_agents.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="agent_selection_type" type="list" label="MOD_SPPROPERTY_AGENT_SELECTION_TYPE" description="MOD_SPPROPERTY_AGENT_SELECTION_TYPE_DESC" default="1">
+                    <option value="0">JALL</option>
+                    <option value="1">MOD_SPPROPERTY_AGENTS_AUTO</option>
+                    <option value="2">MOD_SPPROPERTY_AGENTS_CUSTOM</option>
+                    <option value="3">MOD_SPPROPERTY_AGENTS_FEATURED</option>
+                </field>
+
+                <field name="selected_agents" label="Select Agents" type="sql" query="SELECT title, id FROM #__spproperty_agents WHERE published = 1" key_field="id" value_field="title" multiple="true" showon="agent_selection_type:2" />
+                
+                <field name="ordering" type="list" label="MOD_SPPROPERTY_AGENTS_ORDERING" description="MOD_SPPROPERTY_AGENTS_ORDERING_DESC" default="asc" showon="agent_selection_type!:1">
+                    <option value="asc">MOD_SPPROPERTY_AGENT_ORDERING_ASC</option>
+                    <option value="desc">MOD_SPPROPERTY_AGENT_ORDERING_DESC</option>
+                </field>
+
+                <field name="columns" type="list" label="MOD_SPPROPERTY_AGENTS_COLUMN" description="MOD_SPPROPERTY_AGENTS_COLUMN_DESC" default="3">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </field>
+                <field name="limit" type="text" label="MOD_SPPROPERTY_AGENTS_LIMIT" description="MOD_SPPROPERTY_AGENTS_LIMIT_DESC" default="4" />
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                <field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field name="cachemode" type="hidden" default="static">
+                    <option value="static"></option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

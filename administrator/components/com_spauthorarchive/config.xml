@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+	<fieldset name="basic" label="COM_SPAUTHORARCHIVE_FIELDSET_BASIC_LABEL">
+		<field name="user_groups" type="sql" translate="false" query="SELECT id, title FROM #__usergroups" key_field="id" label="COM_SPAUTHORARCHIVE_CONF_USER_GROUPS" description="COM_SPAUTHORARCHIVE_CONF_USER_GROUPS_DESC" value_field="title" multiple="multiple" />
+
+		<field name="show_authors" type="list" class="btn-group" default="have_article" label="COM_SPAUTHORARCHIVE_CONF_SHOW_AUTHORS" description="COM_SPAUTHORARCHIVE_CONF_SHOW_AUTHORS_DESC">
+			<option value="have_article">COM_SPAUTHORARCHIVE_CONF_SHOW_AUTHORS_HAVE_ARTICLES</option>
+			<option value="all">COM_SPAUTHORARCHIVE_CONF_SHOW_AUTHORS_ALL</option>
+		</field>
+	</fieldset>
+	<fieldset name="licenseupdate">
+		<field name="joomshaper_email" type="email" label="COM_SPAUTHORARCHIVE_CONF_JOOMSHAPER_EMAIL" description="COM_SPAUTHORARCHIVE_CONF_JOOMSHAPER_EMAIL_DESC" />
+		<field name="joomshaper_license_key" type="text" label="COM_SPAUTHORARCHIVE_CONF_JOOMSHAPER_LICENSE_KEY" description="COM_SPAUTHORARCHIVE_CONF_JOOMSHAPER_LICENSE_KEY_DESC" />
+	</fieldset>
+
+	<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+		<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" class="inputbox" filter="rules" component="com_spauthorarchive" section="component" />
+	</fieldset>
+
+</config>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <fieldset name="basic">
+        <field name="id" type="hidden" />
+        <field name="title" type="text" label="COM_SPPROPERTY_FIELD_TITLE" class="inputbox" required="true" />
+        <field name="alias" type="text" id="alias" label="COM_SPPROPERTY_FIELD_ALIAS" description="COM_SPPROPERTY_FIELD_ALIAS_DESC" hint="JFIELD_ALIAS_PLACEHOLDER" size="40" />
+        <field name="designation" type="text" label="COM_SPPROPERTY_FIELD_AGENT_DESINATION" description="COM_SPPROPERTY_FIELD_AGENT_DESINATION" />
+        <field name="phone" type="text" label="COM_SPPROPERTY_FIELD_AGENT_PHONE" description="COM_SPPROPERTY_FIELD_AGENT_PHONE" />
+        <field name="mobile" type="text" label="COM_SPPROPERTY_FIELD_AGENT_MOBILE" description="COM_SPPROPERTY_FIELD_AGENT_MOBILE" />
+        <field name="skype" type="text" label="COM_SPPROPERTY_FIELD_AGENT_SKYPE" description="COM_SPPROPERTY_FIELD_AGENT_SKYPE" />
+        <field name="email" type="email" label="COM_SPPROPERTY_FIELD_AGENT_EMAIL" description="COM_SPPROPERTY_FIELD_AGENT_EMAIL" />
+        <field name="image" type="media" label="COM_SPPROPERTY_FIELD_IMAGE" description="COM_SPPROPERTY_FIELD_IMAGE" />
+        <field name="featured" type="radio" class="btn-group btn-group-yesno radio" label="COM_SPPROPERTY_FIELD_FEATURED" description="COM_SPPROPERTY_FIELD_FEATURED_DESC" default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="description" type="editor" label="COM_SPPROPERTY_FIELD_DESC" description="COM_SPPROPERTY_FIELD_DESC" cols="5" rows="5" filter="\Joomla\CMS\Component\ComponentHelper::filterText" buttons="true" />
+        <field name="published" type="list" label="COM_SPPROPERTY_COMMON_STATUS" labelclass="hello-label" class="chzn-color-state" filter="intval" size="1" default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+        <field name="created_by" type="user" label="COM_SPPROPERTY_FIELD_CREATED_BY"/>
+        <field name="created" type="calendar" label="COM_SPPROPERTY_FIELD_CREATED_ON" translateformat="true"/>
+        <field name="language" type="language" label="COM_SPPROPERTY_FIELD_LANGUAGE">
+            <option value="*">COM_SPPROPERTY_ALL_LANGUAGES</option>
+        </field>
+    </fieldset>
+
+    <fieldset name="social">
+        <field name="facebook" type="text" label="COM_SPPROPERTY_FIELD_SOCIAL_FACEBOOK" description="COM_SPPROPERTY_FIELD_SOCIAL_FACEBOOK" />
+        <field name="instagram" type="text" label="COM_SPPROPERTY_FIELD_SOCIAL_INSTAGRAM" description="COM_SPPROPERTY_FIELD_SOCIAL_INSTAGRAM" />
+        <field name="twitter" type="text" label="COM_SPPROPERTY_FIELD_SOCIAL_TWITTER" description="COM_SPPROPERTY_FIELD_SOCIAL_TWITTER" />
+        <field name="linkedin" type="text" label="COM_SPPROPERTY_FIELD_SOCIAL_LINKEDIN" description="COM_SPPROPERTY_FIELD_SOCIAL_LINKEDIN" />
+        <field name="gplus" type="text" label="COM_SPPROPERTY_FIELD_SOCIAL_GPLUS" description="COM_SPPROPERTY_FIELD_SOCIAL_GPLUS" />
+    </fieldset>
+
+</form>

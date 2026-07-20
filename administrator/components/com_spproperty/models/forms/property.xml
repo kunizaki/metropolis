@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <fieldset name="basic">
+        <field name="id" type="hidden" />
+        <field name="property_id" type="text" label="COM_SPPROPERTY_UNIQUE_ID" description="COM_SPPROPERTY_UNIQUE_ID_DESC" hint="COM_SPPROPERTY_UNIQUE_ID_HINT" readonly="false" />
+        <field name="title" type="text" label="COM_SPPROPERTY_FIELD_TITLE" class="inputbox" required="true" />
+        <field name="alias" type="text" id="alias" label="COM_SPPROPERTY_FIELD_ALIAS" description="COM_SPPROPERTY_FIELD_ALIAS_DESC" hint="JFIELD_ALIAS_PLACEHOLDER" size="40" />
+        <field name="category_id" type="sql" query="SELECT id, title FROM #__spproperty_categories WHERE published = 1 ORDER BY ordering ASC" key_field="id" label="COM_SPPROPERTY_FIELD_CATEGORY" value_field="title" />
+        <field name="property_status" type="list" label="COM_SPPROPERTY_FIELD_PROPERTY_STATUS">
+            <option value="rent">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_RENT</option>
+            <option value="sell">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_SELL</option>
+            <option value="in_hold">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_HOLD</option>
+            <option value="pending">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_PENDING</option>
+            <option value="sold">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_SOLD</option>
+            <option value="under_offer">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_UNDER_OFFER</option>
+        </field>
+        <field name="rent_period" type="text" label="COM_SPPROPERTY_RENT_PERIOD" description="COM_SPPROPERTY_RENT_PERIOD_DESC" showon="property_status:rent" />
+        <field name="featured" type="radio" class="btn-group btn-group-yesno" labelclass="hello-label" label="COM_SPPROPERTY_FIELD_FEATURED" description="COM_SPPROPERTY_FIELD_FEATURED_DESC" default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="agent_id" type="spagents" label="COM_SPPROPERTY_FIELD_AGENT" description="COM_SPPROPERTY_FIELD_AGENT_DESC" />
+        <field name="description" type="editor" label="COM_SPPROPERTY_FIELD_FULL_DESC" description="" required="true" cols="5" rows="5" filter="\Joomla\CMS\Component\ComponentHelper::filterText" buttons="true" />
+        <field name="image" type="media" label="COM_SPPROPERTY_FIELD_PROPERTY_IMAGE" description="COM_SPPROPERTY_FIELD_PROPERTY_IMAGE_DESC" />
+        <field name="gallery_folder" type="radio" class="btn-group btn-group-yesno" labelclass="hello-label" label="COM_SPPROPERTY_FIELD_GALLERY_FOLDER" description="COM_SPPROPERTY_FIELD_GALLERY_FOLDER_DESC" default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="gallery_folder_name" type="text" label="COM_SPPROPERTY_FIELD_GALLERY_FOLDER_NAME" showon="gallery_folder:1" />
+        <field name="gallery" type="spgallery" label="COM_SPPROPERTY_FIELD_GALLERY" description="COM_SPPROPERTY_FIELD_GALLERY_DESC"/>
+        <field name="latitude" type="text" label="COM_SPPROPERTY_FIELD_LATITUDE" description="COM_SPPROPERTY_FIELD_LATITUDE_DESC" />
+        <field name="longitude" type="text" label="COM_SPPROPERTY_FIELD_LONGITUDE" description="COM_SPPROPERTY_FIELD_LONGITUDE_DESC" />
+        <field name="note_map" type="note" class="alert alert-info" label="COM_SPPROPERTY_LATLNG" description="COM_SPPROPERTY_LATLNG_DESC" />
+    </fieldset>
+    <fieldset name="price_fields">
+        <field name="price" type="text" label="COM_SPPROPERTY_FIELD_PROPERTY_PRICE" description="COM_SPPROPERTY_FIELD_PROPERTY_PRICE_DESC" required="true" />
+        <field name="price_request" type="list" label="COM_SPPROPERTY_PRICE_REQUEST" description="COM_SPPROPERTY_PRICE_REQUEST_DESC" default="show">
+            <option value="show">COM_SPPROPERTY_SHOW_PRICE</option>
+            <option value="request">COM_SPPROPERTY_REQUEST_PRICE</option>
+        </field>
+        <field name="fixed_price" type="radio" class="btn-group btn-group-yesno" label="COM_SPPROPERTY_FIELD_FIXED_PRICE" description="COM_SPPROPERTY_FIELD_FIXED_PRICE_DESC" default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="currency" type="spcurrency" field_type="currency" label="COM_SPPROPERTY_CURRENCY" description="COM_SPPROPERTY_CURRENCY_POSITION_DESC" />
+        <field name="currency_position" type="spcurrency" field_type="currency_position" label="COM_SPPROPERTY_CURRENCY_POSITION" description="COM_SPPROPERTY_CURRENCY_POSITION_DESC" />
+        <field name="currency_format" type="spcurrency" field_type="currency_format" label="COM_SPPROPERTY_CURRENCY_FORMAT" description="COM_SPPROPERTY_CURRENCY_FORMAT_DESC" />
+    </fieldset>
+
+    <fieldset name="location">
+        <field name="country" type="spcountries" label="COM_SPPROPERTY_FIELD_COUNTRY" description="COM_SPPROPERTY_FIELD_COUNTRY_DESC" />
+        <field name="city" type="text" label="COM_SPPROPERTY_FIELD_CITY" description="COM_SPPROPERTY_FIELD_CITY" />
+        <field name="address" type="textarea" rows="3" label="COM_SPPROPERTY_FIELD_ADDRESS" description="COM_SPPROPERTY_FIELD_ADDRESS" />
+        <field name="zip" type="text" label="COM_SPPROPERTY_FIELD_ZIP_CODE" description="COM_SPPROPERTY_FIELD_ZIP_CODE" />
+    </fieldset>
+
+    <fieldset name="details">
+        <field name="psize" type="number" label="COM_SPPROPERTY_FIELD_PSIZE_SFT" description="COM_SPPROPERTY_FIELD_PSIZE_SFT_DETAILS" />
+        <field name="beds" type="number" label="COM_SPPROPERTY_FIELD_BEDS" description="COM_SPPROPERTY_FIELD_BEDS_DETAILS" />
+        <field name="baths" type="number" label="COM_SPPROPERTY_FIELD_BATHS" description="COM_SPPROPERTY_FIELD_BATHS_DETAILS" />
+        <field name="garages" type="number" label="COM_SPPROPERTY_FIELD_GARAGES" description="COM_SPPROPERTY_FIELD_GARAGES_DETAILS" />
+        <field name="lvl_fltno" type="text" label="COM_SPPROPERTY_FIELD_FLOOR_FLAT_NO" description="COM_SPPROPERTY_FIELD_FLOOR_FLAT_NO_DETAILS" />
+        <field name="building_year" type="text" label="COM_SPPROPERTY_FIELD_BUILDING_YEAR" description="COM_SPPROPERTY_FIELD_BUILDING_YEAR_DETAILS" />
+        <field name="features_text" type="textarea" rows="3" label="COM_SPPROPERTY_FIELD_FEATURES_TEXT" description="COM_SPPROPERTY_FIELD_FEATURES_TEXT" />
+        <field name="features" type="spfeatures" label="COM_SPPROPERTY_FIELD_FEATURES_TEXT" description="COM_SPPROPERTY_FIELD_FEATURES_TEXT" multiple="true" />
+        <field name="video_text" type="textarea" rows="3" label="COM_SPPROPERTY_FIELD_VIDEO_TEXT" description="COM_SPPROPERTY_FIELD_VIDEO_TEXT" />
+        <field name="video" type="url" label="COM_SPPROPERTY_FIELD_VIDEO_URL" description="COM_SPPROPERTY_FIELD_VIDEO_URL" />
+        <field name="fp_text" type="textarea" rows="3" label="COM_SPPROPERTY_FIELD_FLOORPLAN_TEXT" description="COM_SPPROPERTY_FIELD_FLOORPLAN_TEXT" />
+        <field name="floor_plans" type="subform" formsource="/administrator/components/com_spproperty/models/fields/floorplans.xml" label="COM_SPPROPERTY_FIELD_FLOOR_PLANS" description="COM_SPPROPERTY_FIELD_FLOOR_PLANS" multiple="true" />
+    </fieldset>
+
+    <fieldset name="options">
+        <field name="published" type="list" label="COM_SPPROPERTY_COMMON_STATUS" labelclass="hello-label" class="chzn-color-state" filter="intval" size="1" default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+        <field name="created_by" type="user" label="COM_SPPROPERTY_FIELD_CREATED_BY"/>
+        <field name="created" type="calendar" label="COM_SPPROPERTY_FIELD_CREATED_ON" translateformat="true" />
+        <field name="language" type="language" label="COM_SPPROPERTY_FIELD_LANGUAGE">
+            <option value="*">COM_SPPROPERTY_ALL_LANGUAGES</option>
+        </field>
+        <field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" />
+    </fieldset>
+
+</form>

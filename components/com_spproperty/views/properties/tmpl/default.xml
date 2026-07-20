@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<fields name="params" addfieldpath="/components/com_spproperty/fields">
+		<fieldset name="basic" label="COM_SPPROPERTY_MENUSET_PROPERTIES">
+			<field name="catid" type="spcats" default="" label="COM_SPPROPERTY_FIELD_SELECT_CATEGORY" description="COM_SPPROPERTY_FIELD_SELECT_CATEGORY_DESC"/>
+			<field name="property_status" type="list" label="COM_SPPROPERTY_FIELD_PROPERTY_STATUS" description="COM_SPPROPERTY_FIELD_PROPERTY_STATUS_DESC">
+				<option value="">JALL</option>
+				<option value="rent">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_RENT</option>
+				<option value="sell">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_SELL</option>
+				<option value="in_hold">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_HOLD</option>
+				<option value="pending">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_PENDING</option>
+				<option value="sold">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_SOLD</option>
+				<option value="under_offer">COM_SPPROPERTY_FIELD_PROPERTY_STATUS_IN_UNDER_OFFER</option>
+			</field>
+			<field name="agentid" type="spagent" default="" label="COM_SPPROPERTY_FIELD_SELECT_AGENT" description="COM_SPPROPERTY_FIELD_SELECT_AGENT_DESC"/>
+			<field name="order_by" type="list" default="" label="COM_SPPROPERTY_FIELD_ORDER" description="COM_SPPROPERTY_FIELD_ORDER_BY_DESC">
+				<option value="desc">COM_SPPROPERTY_FIELD_DESC</option>
+				<option value="asc">COM_SPPROPERTY_FIELD_ASC</option>
+				<option value="featured">COM_SPPROPERTY_FIELD_FEATURED</option>
+				<option value="latest">COM_SPPROPERTY_FIELD_LATEST</option>
+				<option value="oldest">COM_SPPROPERTY_FIELD_OLDEST</option>
+			</field>
+
+			<field name="hide_pagination" type="radio" class="btn-group" default="0" label="COM_SPPROPERTY_HIDE_PAGINATION" description="COM_SPPROPERTY_HIDE_PAGINATION_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="property_carousel" type="list" default="default" label="COM_SPPROPERTY_SLIDER_STYLE" description="COM_SPPROPERTY_SLIDER_STYLE_DESC">
+				<option value="default">COM_SPPROPERTY_SINGLE_ITEM</option>
+				<option value="alternative">COM_SPPROPERTY_MULTIPLE_ITEMS</option>
+			</field>
+
+		</fieldset>
+	</fields>
+</metadata>

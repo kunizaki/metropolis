@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+	<fieldset name="basic" label="COM_SPPROPERTY_FIELDSET_BASIC_LABEL">
+		<field name="map_selection" type="list" label="COM_SPPROPERTY_SELECT_MAP" description="COM_SPPROPERTY_SELECT_MAP_DESC" default="google">
+			<option value="google">Google Map</option>
+			<option value="leaflet">Open Street Map</option>
+		</field>
+		<field name="gmap_api" type="text" label="COM_SPPROPERTY_GOOGLE_MAP_API" description="COM_SPPROPERTY_GOOGLE_MAP_API_DESC" default="" showon="map_selection:google" />
+		<field name="mapbox_token" type="text" label="COM_SPPROPERTY_MAP_BOX_TOKEN" description="COM_SPPROPERTY_MAP_BOX_TOKEN_DESC" showon="map_selection:leaflet" />
+
+		<field name="zoom_map" type="text" label="COM_SPPROPERTY_MAP_ZOOM" description="COM_SPPROPERTY_MAP_ZOOM_DESC" default="5"/>
+
+		<field name="spacer1" type="spacer" hr="true" />
+
+		<field name="content_prepare" type="radio" class="btn-group btn-group-yesno" filter="integer" label="COM_SPPROPERTY_CONTENT_PREPARE" description="COM_SPPROPERTY_CONTENT_PREPARE_DESC" default="0">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="agent_group_name" type="sql" query="SELECT title FROM #__usergroups WHERE id > 9" key_field="title" value_field="title" filter="string" label="COM_SPPROPERTY_AGENT_GROUP_NAME" description="COM_SPPROPERTY_AGENT_GROUP_NAME_DESC" default="Agent" >
+			<option value="">JSELECT</option>
+		</field>
+		<field name="spacer2" type="spacer" hr="true" />
+		<field name="currency" type="list" label="COM_SPPROPERTY_CURRENCY" description="COM_SPPROPERTY_CURRENCY_DESC" default="USD:$">
+			<option value="USD:$">United States dollar($)</option>
+			<option value="ALL:Lek">Albania Lek(Lek)</option>
+			<option value="AFN:؋">Afghanistan Afghani(؋)</option>
+			<option value="ARS:$">Argentina Peso($)</option>
+			<option value="AWG:ƒ">Aruba Guilder(ƒ)</option>
+			<option value="AUD:$">Australia Dollar($)</option>
+			<option value="AZN:₼">Azerbaijan Manat(₼)</option>
+			<option value="BDT:৳">Bangladesh Taka(৳)</option>
+			<option value="BGN:лв">Bulgaria Lev(лв)</option>
+			<option value="BRL:R$">Brazil Real(R$)</option>
+			<option value="BND:$">Brunei Darussalam Dollar($)</option>
+			<option value="GBP:£">British pound(£)</option>
+			<option value="BRL:R$">Brazilian Real(R$)</option>
+			<option value="KHR:៛">Cambodia Riel(៛)</option>
+			<option value="CAD:$">Canadian Dollar($)</option>
+			<option value="CZK:Kč">Czech Koruna(Kč)</option>
+			<option value="DKK:kr.">Danish Krone(kr.)</option>
+			<option value="EUR:€">Euro(€)</option>
+			<option value="HKD:HK$">Hong Kong Dollar(HK$)</option>
+			<option value="HUF:Ft">Hungarian Forint(Ft)</option>
+			<option value="INR:₹">India Rupee(₹)</option>
+			<option value="ILS:₪">Israeli New Sheqel(₪)</option>
+			<option value="JPY:¥">Japanese Yen(¥)</option>
+			<option value="MYR:RM">Malaysian Ringgit(RM)</option>
+			<option value="MXN:Mex$">Mexican Peso(Mex$)</option>
+			<option value="NOK:kr">Norwegian Krone(kr)</option>
+			<option value="NZD:$">New Zealand Dollar($)</option>
+			<option value="PHP:₱">Philippine Peso(₱)</option>
+			<option value="PLN:zł">Polish Zloty(zł)</option>
+			<option value="RUB:₽">Russian Ruble(₽)</option>
+			<option value="SGD:$">Singapore Dollar($)</option>
+			<option value="SEK:kr">Swedish Krona(kr)</option>
+			<option value="CHF:CHF">Swiss Franc(CHF)</option>
+			<option value="TWD:角">Taiwan New Dollar(角)</option>
+			<option value="THB:฿">Thai Baht(฿)</option>
+			<option value="TRY:TRY">Turkish Lira(TRY)</option>
+		</field>
+		<field name="currency_format" type="list" label="COM_SPPROPERTY_CURRENCY_FORMAT" description="COM_SPPROPERTY_CURRENCY_FORMAT_DESC" default="short">
+			<option value="short">COM_SPPROPERTY_FORMAT_SHORT</option>
+			<option value="long">COM_SPPROPERTY_FORMAT_LONG</option>
+		</field>
+		<field name="currency_position" type="list" label="COM_SPPROPERTY_CURRENCY_POSITION" description="COM_SPPROPERTY_CURRENCY_POSITION_DESC" default="left">
+			<option value="left">COM_SPPROPERTY_POSITION_LEFT</option>
+			<option value="right">COM_SPPROPERTY_POSITION_RIGHT</option>
+		</field>
+
+		<field name="spacer3" type="spacer" hr="true" />
+
+		<field name="contact_captcha" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_SPPROPERTY_AGENT_CONTACT_CAPTCHA" description="COM_SPPROPERTY_AGENT_CONTACT_CAPTCHA_DESC" filter="integer">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="contact_tac" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_SPPROPERTY_AGENT_CONTACT_TAC" description="COM_SPPROPERTY_AGENT_CONTACT_TAC_DESC" filter="integer">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="contact_tac_text" type="textarea" label="COM_SPPROPERTY_AGENT_CONTACT_TAC_TEXT" description="COM_SPPROPERTY_AGENT_CONTACT_TAC_TEXT_DESC" cols="30" rows="8" showon="contact_tac:1" filter="raw"/>
+
+		<field name="note_tac" type="note" class="alert alert-info" label="COM_SPPROPERTY_AGENT_CONTACT_TAC_TEXT" description="COM_SPPROPERTY_AGENT_CONTACT_TAC_TEXT_DESC" showon="contact_tac:1" />
+	</fieldset>
+	<fieldset name="properties" label="COM_SPPROPERTY_FIELDSET_PROPERTIES_LABEL">
+		<field name="req_visit" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_SPPROPERTY_CONF_SHOWHIDE_REQUEST_FOR_VISIT">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="enable_add_to_fav" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_SPPROPERTY_ADD_TO_FAVORITE" description="COM_SPPROPERTY_ADD_TO_FAVORITE_DESC">
+			<option value="1">COM_SPPROPERTY_FAV_ALLOW</option>
+			<option value="0">COM_SPPROPERTY_FAV_DISALLOW</option>
+		</field>
+		<field name="recipient" type="text" label="COM_SPPROPERTY_RECIPIENT_EMAIL" description="COM_SPPROPERTY_RECIPIENT_EMAIL_DESC" default="" />
+		<field name="prpry_rm_btn_text" type="text" default="More Info" label="COM_SPPROPERTY_PROPERTY_READMORE_TEXT" description="COM_SPPROPERTY_PROPERTY_READMORE_TEXT_DESC" />
+		<field name="spacer1" type="spacer" hr="true" />
+
+		<field name="properties_limit" type="number" default="12" label="COM_SPPROPERTY_CONF_PROPTS_LIMIT" description="COM_SPPROPERTY_CONF_PROPTS_LIMIT_DESC"/>
+		<field name="properties_columns" type="list" default="4" label="COM_SPPROPERTY_SET_PROPTS_COLUMNS" description="COM_SPPROPERTY_SET_PROPTS_COLUMNS_DESC">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="6">6</option>
+			<option value="12">12</option>
+		</field>
+		<field name="show_unit" type="radio" label="COM_SPPROPERTY_SHOW_UNIT" description="COM_SPPROPERTY_SHOW_UNIT_DESC" class="btn-group btn-group-yesno" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="measurement" type="text" label="COM_SPPROPERTY_MEASUREMENT" description="COM_SPPROPERTY_MEASUREMENT_DESC" />
+		<field name="show_property_id" type="radio" label="COM_SPPROPERTY_SHOW_PROPERTY_ID" description="COM_SPPROPERTY_SHOW_PROPERTY_ID_DESC" class="btn-group btn-group-yesno" default="0" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="show_rounds_price" type="radio" label="COM_SPPROPERTY_ROUNDS_PRICE" description="COM_SPPROPERTY_ROUNDS_PRICE_DESC" class="btn-group btn-group-yesno" default="0" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="use_number_format" type="radio" label="COM_SPPROPERTY_NUMBER_FORMAT" description="COM_SPPROPERTY_NUMBER_FORMAT_DESC" class="btn-group btn-group-yesno" default="1" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="use_separator" type="radio" label="COM_SPPROPERTY_PRICE_SEPARATOR" description="COM_SPPROPERTY_PRICE_SEPARATOR_DESC" class="btn-group btn-group-yesno" default="1" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="spacer4" type="spacer" hr="true" />
+		<field name="property_thumbnail" type="text" label="COM_SPPROPERTY_PROPERTY_THUMBNAIL" description="COM_SPPROPERTY_PROPERTY_THUMBNAIL_DESC" default="360x207" />
+		<field name="property_thumbnail_tower" type="text" label="COM_SPPROPERTY_PROPERTY_THUMBNAIL_TOWER" description="COM_SPPROPERTY_PROPERTY_THUMBNAIL_TOWER_DESC" default="640x715" />
+
+	</fieldset>
+	<fieldset name="agents" label="COM_SPPROPERTY_FIELDSET_AGENTS_LABEL">
+		<field name="show_contact" type="radio" class="btn-group" default="0" label="COM_SPPROPERTY_CONF_SHOWHIDE_CONTCT_FORM">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="agent_thumbnail" type="text" label="COM_SPPROPERTY_AGENT_THUMBNAIL" description="COM_SPPROPERTY_AGENT_THUMBNAIL_DESC" default="90x90" />
+
+
+		<field name="spacer5" type="spacer" hr="true" />
+
+		<field name="agents_limit" type="number" default="12" label="COM_SPPROPERTY_CONF_AGENTS_LIMIT" description="COM_SPPROPERTY_CONF_AGENTS_LIMIT_DESC"/>
+		<field name="agents_columns" type="list" default="4" label="COM_SPPROPERTY_SET_AGENTS_COLUMNS" description="COM_SPPROPERTY_SET_AGENTS_COLUMNS_DESC">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="6">6</option>
+			<option value="12">12</option>
+		</field>
+	</fieldset>
+	<fieldset name="licenseupdate">
+		<field name="joomshaper_email" type="email" label="COM_SPPROPERTY_CONF_JOOMSHAPER_EMAIL" description="COM_SPPROPERTY_CONF_JOOMSHAPER_EMAIL_DESC" />
+		<field name="joomshaper_license_key" type="password" label="COM_SPPROPERTY_CONF_JOOMSHAPER_LICENSE_KEY" description="COM_SPPROPERTY_CONF_JOOMSHAPER_LICENSE_KEY_DESC" />
+	</fieldset>
+	<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+		<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" filter="rules" component="com_spproperty" section="component" />
+	</fieldset>
+</config>

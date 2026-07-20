@@ -1,0 +1,528 @@
+/**
+ * @package Helix V3 Framework
+ * @template Shaper Empire
+ * @author JoomShaper https://www.joomshaper.com
+ * @copyright Copyright (c) 2010 - 2023 JoomShaper
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 or later
+ */
+
+/*=========================================
+ *======= 	 Megamenu	   ============
+ *=======================================*/
+.sp-megamenu-parent {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 9;
+    display: block;
+    float: left;
+    >li {
+        display: inline-block;
+        position: relative;
+        padding: 0;
+        >a {
+            color: #878787;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2.8px;
+            line-height: 64px;
+            padding: 0 20px;
+            text-transform: uppercase;
+            position: relative;
+            &:after{
+                border: 5px solid #f2f4f7;
+                border-radius: 50%;
+                bottom: -10px;
+                content: "";
+                height: 20px;
+                left: -2px;
+                margin: 0 auto;
+                position: absolute;
+                right: 0;
+                top: auto;
+                width: 20px;
+                z-index: 99;
+                .transition(.4s);
+                transform: scale(0);
+            }
+        }
+        &:hover,
+            &.active{
+            a{
+                &:after{
+                    transform: scale(1);
+                }
+            }
+        }
+        &.menu-justify{
+            position: static;
+        }
+    }
+
+    .sp-module {
+        padding: 10px;
+    }
+
+    .sp-mega-group {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .sp-mega-group-child {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .sp-dropdown {
+        margin: 0;
+        position: absolute;
+        z-index: 10;
+        display: none;
+
+        .sp-dropdown-inner {
+            background: #f2f4f7;
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+            padding: 20px 0;
+        }
+
+        .sp-dropdown-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            .sp-has-child>a:after{
+                font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+                content: " \f105";
+                float: right;
+            }
+        }
+
+        &.sp-menu-center {
+            margin-left: 45px;
+        }
+
+        &.sp-dropdown-main {
+            top: 100%;
+            &.sp-menu-right{
+                left: 0;
+            }
+            &.sp-menu-full {
+                left: 0;
+            }
+
+            &.sp-menu-left {
+                right: 0;
+            }
+        }
+
+        &.sp-dropdown-sub {
+            top: 0;
+            left: 100%;
+            .sp-dropdown-inner {
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        //List Item
+        li.sp-menu-item {
+            //child sub
+            display: block;
+            padding: 0;
+            position: relative;
+            >a {
+                display: block;
+                padding: 8px 30px;
+                color: #878787;
+                cursor: pointer;
+
+                &.sp-group-title {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .sp-dropdown-mega {
+        >.row {
+            margin-top: 30px;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    //Has Child
+    .sp-has-child {
+        &:hover {
+            >.sp-dropdown {
+                display: block;
+            }
+        }
+    }
+
+    //Fade Animation
+    &.menu-fade {
+        .sp-has-child:hover {
+            >.sp-dropdown {
+                -webkit-animation: spMenuFadeIn 400ms;
+                animation: spMenuFadeIn 400ms;
+            }
+        }
+    }
+
+    //Zoom Animation
+    &.menu-zoom {
+        .sp-has-child:hover {
+            >.sp-dropdown {
+                -webkit-animation: spMenuZoom 400ms;
+                animation: spMenuZoom 400ms;
+            }
+        }
+    }
+
+    //Fade in up Animation
+    &.menu-fade-up {
+        .sp-has-child:hover {
+            >.sp-dropdown {
+                -webkit-animation: spMenuFadeInUp 400ms;
+                animation: spMenuFadeInUp 400ms;
+            }
+        }
+    }
+}
+
+// Megamenu
+.sp-megamenu-parent {
+
+    .sp-dropdown {
+        li.sp-menu-item {
+            >a {
+
+                &:hover {
+                    background: #fff;
+                }
+            }
+        }
+    }
+}
+
+/*=========================================
+ *======= 	Off Canvas   ============
+ *=======================================*/
+
+#offcanvas-toggler {
+    float: right;
+    line-height: 65px;
+    margin-left: 15px;
+    font-size: 20px;
+    >i {
+        color: #878787;
+        .transition(~'color 400ms, background-color 400ms');
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+body.offcanvas {
+    .body-innerwrapper{
+        right: 320px;
+    }
+    .offcanvas-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 1;
+        z-index: 9999;
+        background: rgba(0,0,0,.2);
+    }
+}
+.body-innerwrapper{
+    position: relative;
+    overflow-x: hidden;
+    -webkit-transition: .4s;
+    transition: .4s;
+    right: 0;
+}
+
+.close-offcanvas {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    line-height: 23px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.offcanvas-menu {
+    width:  320px;
+    height: 100%;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    right: -320px;
+    z-index: 99999;
+    overflow: inherit;
+    -webkit-transition: .4s;
+    transition: .4s;
+    .offcanvas-inner {
+        .sp-module {
+            margin-top: 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+            margin-bottom: 50px;
+            &:after{
+                display: none;
+            }
+
+            &:last-child{
+                border-bottom: none;
+                margin-bottom: 0;
+            }
+
+            &.off-canvas-menu{
+                padding: 0;
+            }
+
+            .sp-module-title {
+                font-size: 16px;
+                line-height: 1;
+                text-transform: uppercase;
+            }
+            ul.nav.menu{
+                display: block;
+            }
+            ul {
+                > li{
+                    border: 0;
+                    position: relative;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                    overflow: hidden;
+                    a {
+                        .transition(300ms);
+                        padding:10px 20px;
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        color: #fff;
+                        font-weight: 500;
+                        line-height: 28px;
+                    }
+                    &:hover,
+                        &:focus{
+                        a{
+                            background: rgba(0, 0, 0, 0.15);
+                        }
+                    }
+                    a {
+                        &:hover,
+                            &:focus{
+                            background: rgba(0, 0, 0, 0.15);
+                        }
+                    }
+                    ul {
+                        > li{
+                            &.active,
+                            &:hover,
+                                &:focus {
+                                > a{
+                                    background: rgba(0, 0, 0, 0.15) !important;
+                                }
+                            }
+                            > a{
+                                &:hover,
+                                    &:focus{
+                                    background: rgba(0, 0, 0, 0.15) !important;
+                                }
+                            }
+                        }
+                    }
+
+                    .offcanvas-menu-toggler {
+                        display: inline-block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        padding:13px 20px;
+                        cursor: pointer;
+                        .open-icon {
+                            display: none;
+                        }
+
+                        .close-icon {
+                            display: inline;
+                        }
+
+                        &.collapsed {
+                            .open-icon {
+                                display: inline;
+                            }
+                            .close-icon {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    >a:after  {
+                        display: none;
+                    }
+
+                    ul {
+                        background: rgba(0,0,0,0.02);
+                        >li > a{padding-left: 30px;}
+                    }
+                }
+            }
+
+            &:first-child {
+                margin-top: 0;
+                padding: 30px;
+            }
+        }
+        .search {
+            margin-top: 25px;
+            input {
+                width: 100%;
+                background: transparent;
+                border-color: rgba(0,0,0,.4);
+                color: #000;
+            }
+        }
+    }
+}
+
+.ltr {
+
+    .offcanvas-menu {
+        .transition(.4s);
+    }
+
+    .body-innerwrapper:after {
+        right: 0;
+    }
+
+    .offcanvas-menu {
+        right: -320px;
+    }
+
+    &.offcanvas {
+        .offcanvas-menu {
+            right: 0;
+        }
+    }
+}
+
+.offcanvas {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .body-innerwrapper:after {
+        width: 100%;
+        height: 100%;
+    }
+
+    .offcanvas-menu {
+        right: 0;
+
+        ul.nav-child li {
+            padding-left: 10px;
+        }
+    }
+}
+
+.menu .nav-child.small {
+    font-size: inherit;
+}
+
+/*=========================================
+ *======= 	Menu Animation   ============
+ *=======================================*/
+@-webkit-keyframes spMenuFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes spMenuFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes spMenuZoom {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.8);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes spMenuZoom {
+    0% {
+        opacity: 0;
+        transform: scale(.8);
+        -webkit-transform: scale(.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}
+
+@-webkit-keyframes spMenuFadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 30px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+    }
+}
+
+@keyframes spMenuFadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 30px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.offcanvas{
+    visibility: visible;
+}

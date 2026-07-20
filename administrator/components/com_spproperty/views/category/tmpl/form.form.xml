@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form validate="true" serverside_validate="true" addfieldpath="/administrator/components/com_spproperty/fields">
+
+	<fieldset name="basic"  label="COM_SPPROPERTY_FIELDSET_BASIC">
+		
+		<field name="title" 
+			type="text"
+			label="COM_SPPROPERTY_FIELD_TITLE"
+			required="true"
+			size="50" 
+		/>
+
+		<field name="slug"
+			type="text"
+			label="COM_SPPROPERTY_FIELD_ALIAS"
+			size="50" 
+		/>
+
+		<field name="icon_image"
+		 	type="radio"
+		 	class="btn-group btn-group-yesno"
+		 	default="0"
+		 	label="COM_SPPROPERTY_SHOW_ICON_IMAGE"
+		 	description="COM_SPLMS_SHOW_FIELD_DESC">
+				<option value="1">COM_SPPROPERTY_FIELD_IMAGE</option>
+				<option value="0">COM_SPPROPERTY_FIELD_ICON</option>
+		 </field>
+
+		 <field name="image" 
+		 	type="image"
+			class="image"
+			label="COM_SPPROPERTY_FIELD_IMAGE"
+			showon="icon_image:1"
+		 />
+
+		 <field name="icon" type="text"
+			class="inputbox"
+			label="COM_SPPROPERTY_FIELD_ICON"
+			description="COM_SPPROPERTY_FIELD_ICON_DESC"
+			size="50"
+			showon="icon_image:2"
+		 />
+
+		<field name="desc" 
+			type="editor"
+			class="inputbox"
+			label="COM_SPPROPERTY_FIELD_DESC"
+			width="300"
+			filter="JComponentHelper::filterText"
+		/>
+
+		<field name="enabled" type="list" label="JSTATUS" class="chzn-color-state" filter="intval" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+
+		<field name="language" type="language" label="COM_SPPROPERTY_FIELD_LANGUAGE_LABEL">
+			<option value="*">COM_SPPROPERTY_ALL_LANGUAGES</option>
+		</field>
+		<field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" />
+
+	</fieldset>
+</form>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="user" method="upgrade">
+    <name>User - SppropertyProfile</name>
+    <author>JoomShaper</author>
+    <creationDate>Sept 2018</creationDate>
+    <copyright>(C) 2010 - 2018 JoomShaper. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>info@joomshaper.com</authorEmail>
+    <authorUrl>www.joomshaper.com</authorUrl>
+    <version>4.1.2</version>
+    <description>User profile plugin for SP Property</description>
+    <files>
+        <filename plugin="sppropertyprofile">sppropertyprofile.php</filename>
+        <folder>profile</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.plg_user_sppropertyprofile.ini</language>
+        <language tag="en-GB">en-GB.plg_user_sppropertyprofile.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="register-require-user" type="spacer" label="PLG_USER_PROFILE_FIELD_NAME_REGISTER_REQUIRE_USER" class="text" />
+                
+                <field name="register-require_designation" type="list" label="PLG_USER_PROFILE_FIELD_DESIGNATION" description="PLG_USER_PROFILE_FIELD_DESIGNATION_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+                <field name="register-require_phone" type="list" label="PLG_USER_PROFILE_FIELD_PHONE" description="PLG_USER_PROFILE_FIELD_PHONE_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+                <field name="register-require_mobile" type="list" label="PLG_USER_PROFILE_FIELD_MOBILE" description="PLG_USER_PROFILE_FIELD_MOBILE_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+                <field name="register-require_skype" type="list" label="PLG_USER_PROFILE_FIELD_SKYPE" description="PLG_USER_PROFILE_FIELD_SKYPE_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+                <field name="register-require_image" type="list" label="PLG_USER_PROFILE_FIELD_IMAGE" description="PLG_USER_PROFILE_FIELD_IMAGE_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+                <field name="register-require_description" type="list" label="PLG_USER_PROFILE_FIELD_DESCRIPTION" description="PLG_USER_PROFILE_FIELD_DESCRIPTION_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+                <field name="register-require_facebook" type="list" label="PLG_USER_PROFILE_FIELD_FACEBOOK" description="PLG_USER_PROFILE_FIELD_FACEBOOK_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+                <field name="register-require_twitter" type="list" label="PLG_USER_PROFILE_FIELD_TWITTER" description="PLG_USER_PROFILE_FIELD_TWITTER_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+                <field name="register-require_linkedin" type="list" label="PLG_USER_PROFILE_FIELD_LINKEDIN" description="PLG_USER_PROFILE_FIELD_LINKEDIN_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+                <field name="register-require_gplus" type="list" label="PLG_USER_PROFILE_FIELD_GPLUS" description="PLG_USER_PROFILE_FIELD_GPLUS_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+
+                <!-- options for editing  profile -->
+                <field name="profile-require-user" type="spacer" label="PLG_USER_PROFILE_FIELD_NAME_REGISTER_REQUIRE_USER" class="text" />
+                <field name="profile-require_designation" type="list" label="PLG_USER_PROFILE_FIELD_DESIGNATION" description="PLG_USER_PROFILE_FIELD_DESIGNATION_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+                <field name="profile-require_phone" type="list" label="PLG_USER_PROFILE_FIELD_PHONE" description="PLG_USER_PROFILE_FIELD_PHONE_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+                <field name="profile-require_mobile" type="list" label="PLG_USER_PROFILE_FIELD_MOBILE" description="PLG_USER_PROFILE_FIELD_MOBILE_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+                <field name="profile-require_skype" type="list" label="PLG_USER_PROFILE_FIELD_SKYPE" description="PLG_USER_PROFILE_FIELD_SKYPE_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+                <field name="profile-require_image" type="list" label="PLG_USER_PROFILE_FIELD_IMAGE" description="PLG_USER_PROFILE_FIELD_IMAGE_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+                <field name="profile-require_description" type="list" label="PLG_USER_PROFILE_FIELD_DESCRIPTION" description="PLG_USER_PROFILE_FIELD_DESCRIPTION_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+                <field name="profile-require_facebook" type="list" label="PLG_USER_PROFILE_FIELD_FACEBOOK" description="PLG_USER_PROFILE_FIELD_FACEBOOK_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+                <field name="profile-require_twitter" type="list" label="PLG_USER_PROFILE_FIELD_TWITTER" description="PLG_USER_PROFILE_FIELD_TWITTER_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+                <field name="profile-require_linkedin" type="list" label="PLG_USER_PROFILE_FIELD_LINKEDIN" description="PLG_USER_PROFILE_FIELD_LINKEDIN_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+                <field name="profile-require_gplus" type="list" label="PLG_USER_PROFILE_FIELD_GPLUS" description="PLG_USER_PROFILE_FIELD_GPLUS_DESC" default="1" filter="integer">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+
+                <field
+					name="user_groups"
+					type="usergrouplist"
+					multiple="true"
+					required="true"
+					label="PLG_USER_PROFILE_FIELD_USER_GROUPS"
+					description="PLG_USER_PROFILE_FIELD_USER_GROUPS_DESC"
+                    layout="joomla.form.field.list-fancy-select"
+				/>
+
+            </fieldset>
+        </fields>
+    </config>
+</extension>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="user" method="upgrade">
+	<name>plg_user_profilespaarchive</name>
+	<author>JoomShaper</author>
+	<creationDate>Sept 2018</creationDate>
+	<copyright>(C) 2010 - 2018 JoomShaper. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@joomshaper.com</authorEmail>
+	<authorUrl>www.joomshaper.com</authorUrl>
+	<version>2.0.0</version>
+	<description>User Profile Plug-in For SP Author Archive component</description>
+
+	<files>
+		<filename plugin="profilespaarchive">profilespaarchive.php</filename>
+		<folder>fields</folder>
+		<folder>profiles</folder>
+		<folder>assets</folder>
+	</files>
+
+	<languages>
+		<language tag="en-GB">en-GB.plg_user_profilespaarchive.ini</language>
+		<language tag="en-GB">en-GB.plg_user_profilespaarchive.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="register-require_designation"
+					type="list"
+					label="PLG_USER_PROFILESPAARCHIVE_FIELD_DESIGNATION"
+					description="PLG_USER_PROFILESPAARCHIVE_FIELD_DESIGNATION_DESC">
+					<option value="2">JOPTION_REQUIRED</option>
+					<option value="1">JOPTION_OPTIONAL</option>
+					<option value="0">JDISABLED</option>
+				</field>
+
+				<field name="profile-require_description"
+					type="list"
+					label="PLG_USER_PROFILESPAARCHIVE_FIELD_DESCRIPTION"
+					description="PLG_USER_PROFILESPAARCHIVE_FIELD_DESCRIPTION_DESC">
+					<option value="2">JOPTION_REQUIRED</option>
+					<option value="1">JOPTION_OPTIONAL</option>
+					<option value="0">JDISABLED</option>
+				</field>
+				
+				<field name="profile-require_social"
+					type="list"
+					label="PLG_USER_PROFILESPAARCHIVE_FIELD_SOCIAL"
+					description="PLG_USER_PROFILESPAARCHIVE_FIELD_SOCIAL_DESC">
+					<option value="2">JOPTION_REQUIRED</option>
+					<option value="1">JOPTION_OPTIONAL</option>
+					<option value="0">JDISABLED</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+ </extension>

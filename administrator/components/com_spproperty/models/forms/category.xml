@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <fieldset name="basic">
+        <field name="id" type="hidden" />
+        <field name="title" type="text" label="JGLOBAL_TITLE" description="JFIELD_TITLE_DESC" class="inputbox" required="true" />
+        <field name="alias" type="text" id="alias" label="JFIELD_ALIAS_LABEL" description="JFIELD_ALIAS_DESC" hint="JFIELD_ALIAS_PLACEHOLDER" size="40" />
+        <field name="icon_image" type="radio" label="COM_SPPROPERTY_SHOW_ICON_IMAGE" description="COM_SPLMS_SHOW_FIELD_DESC" class="btn-group" default="0">
+            <option value="1">COM_SPPROPERTY_FIELD_IMAGE</option>
+            <option value="0">COM_SPPROPERTY_FIELD_ICON</option>
+        </field>
+        <field name="image" type="media" label="COM_SPPROPERTY_FIELD_IMAGE" description="COM_SPPROPERTY_FIELD_IMAGE" showon="icon_image:1" />
+        <field name="icon" type="faicons" label="COM_SPPROPERTY_FIELD_ICON" description="COM_SPPROPERTY_FIELD_ICON_DESC" showon="icon_image:0" />
+        <field name="desc" type="editor" label="COM_SPPROPERTY_FIELD_DESC" description="COM_SPPROPERTY_FIELD_DESC" cols="5" rows="5" filter="\Joomla\CMS\Component\ComponentHelper::filterText" buttons="true" />
+        <field name="published" type="list" label="COM_SPPROPERTY_COMMON_STATUS" labelclass="hello-label" class="chzn-color-state" filter="intval" size="1" default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+        <field name="language" type="language" label="COM_SPPROPERTY_FIELD_LANGUAGE">
+            <option value="*">COM_SPPROPERTY_ALL_LANGUAGES</option>
+        </field>
+        <field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" />
+    </fieldset>
+</form>
+	

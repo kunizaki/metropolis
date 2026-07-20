@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form validate="true" serverside_validate="true" addfieldpath="/administrator/components/com_spproperty/fields">
+
+	<fieldset name="basic"  label="COM_SPPROPERTY_FIELDSET_BASIC">
+		
+		<field name="spproperty_visitrequest_id" 
+			type="number"
+			label="COM_SPPROPERTY_FIELD_REQUEST_ID"
+			size="50"
+			readonly="true"
+		/>
+
+		<field name="spproperty_property_id"
+		 	type="sql"
+        	translate="false" 
+        	query="SELECT spproperty_property_id, title FROM #__spproperty_properties WHERE enabled = 1" 
+        	key_field="spproperty_property_id"
+        	value_field="title"
+        	label="COM_SPPROPERTY_FIELD_PROPERTY"
+        	required="true"
+        />
+
+		<field name="created_by"
+		 	label="COM_SPPROPERTY_FIELD_REQUEST_USER" 
+		 	description="COM_SPPROPERTY_FIELD_REQUEST_USER_DESC" 
+        	type="user"
+        />
+
+        <field name="created_on" 
+			type="calendar"
+			label="COM_SPPROPERTY_FIELD_REQUEST_TIME" 
+		 	description="COM_SPPROPERTY_FIELD_REQUEST_TIME_DESC" 
+		/>
+
+		<field name="visitor_ip"
+			type="text"
+			label="COM_SPPROPERTY_FIELD_CUSTOMER_IP"
+			size="50" 
+		/>
+
+        <field name="customer_name"
+			type="text"
+			label="COM_SPPROPERTY_FIELD_CUSTOMER_NAME"
+			size="50"
+			required="true"
+		/>
+
+		<field name="customer_email"
+			type="email"
+			validate="email"
+			label="COM_SPPROPERTY_FIELD_CUSTOMER_EMAIL"
+			size="50" 
+		/>
+
+		<field name="customer_phone"
+			type="text"
+			label="COM_SPPROPERTY_FIELD_CUSTOMER_PHONE"
+			size="50" 
+		/>
+
+		<field name="customer_comments"
+			type="textarea"
+			label="COM_SPPROPERTY_FIELD_CUSTOMER_COMMENTS"
+			size="50" 
+		/>
+
+		<field name="enabled" type="list" label="JSTATUS" class="chzn-color-state" filter="intval" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+
+	</fieldset>
+</form>

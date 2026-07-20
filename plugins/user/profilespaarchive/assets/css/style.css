@@ -1,0 +1,21 @@
+.profile-edit .icon-plus:before, .registration .icon-plus:before{
+  content: "\f067";
+  color: #fff;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+.profile-edit .icon-minus:before, .registration .icon-minus:before{
+  content: "\f00d";
+  color: #fff;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+.profile-edit .icon-arrows-alt:before, .registration .icon-arrows-alt:before{
+  content: "\f0b2";
+  font-family: 'Font Awesome 5 Free';
+  color: #fff;
+  font-weight: 900;
+}
+.profile-edit .subform-repeatable > .btn-toolbar, .registration.subform-repeatable > .btn-toolbar{
+  margin-bottom: 20px;
+}

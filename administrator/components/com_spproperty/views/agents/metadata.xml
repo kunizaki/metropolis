@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<view title="COM_SPPROPERTY_TITLE_AGENTS">
+		<message><![CDATA[COM_SPPROPERTY_TITLE_AGENTS]]></message>
+	</view>
+	<foflib>
+		<ordering>1</ordering>
+	</foflib>
+</metadata>

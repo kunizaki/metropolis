@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <fields name="params" addfieldpath="/components/com_spproperty/fields">
+        <fieldset name="basic" label="COM_SPPROPERTY_MENUSET_CATEGORIES">
+            <field name="category_id" type="sql" query="select title,id from #__spproperty_categories where published=1"
+            key_field="id" value_field="title" label="COM_SPPROPERTY_MENUSET_SELECT_CATEGORIES" edit="false" clear="false" description="COM_SPPROPERTY_MENUSET_SELECT_CATEGORIES_DESC" multiple="true" layout='joomla.form.field.list-fancy-select'/>
+            <field name="category_limit" type="text" label="COM_SPPROPERTY_GALLERIES_LIMIT" default="6" />
+        </fieldset>
+        <fieldset name="request" label="COM_SPPROPERTY_MENUSET_SELECT_CATEGORIES">
+            
+        </fieldset>
+    </fields>
+</metadata>

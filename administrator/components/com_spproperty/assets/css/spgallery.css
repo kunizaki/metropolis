@@ -1,0 +1,209 @@
+
+.spgallery-drop-area {
+  border: 2px dashed #d0d0d0;
+  border-radius: 10px;
+  text-align: center;
+  width: 800px;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.spgallery-drop-area .upload-image {
+  width: 50px;
+  height: auto;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.spgallery-drop-area p {
+  text-transform: uppercase;
+}
+.spgallery-drop-area.highlight {
+  border-color: purple;
+}
+p {
+  margin-top: 0;
+}
+.spgallery-form {
+  margin-bottom: 10px;
+}
+.spgallery-drop-area .gallery {
+  margin-top: 10px;
+}
+.spgallery-drop-area .gallery img {
+  width: 150px;
+  vertical-align: middle;
+}
+.button {
+  display: inline-block;
+  padding: 10px;
+  background: #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.button:hover {
+  background: #ddd;
+}
+.spgallery-drop-area .fileElem {
+  display: none;
+}
+
+.spgallery-drop-area.highlight {
+  border: 2px solid #000 !important;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(199,195,199,1);
+  -moz-box-shadow: 2px 2px 4px 0px rgba(199,195,199,1);
+  box-shadow: 2px 2px 4px 0px rgba(199,195,199,1);
+}
+
+.spgallery-drop-area .gallery .image-wrapper {
+  border: 1px solid #f9f9f9;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  display: inline-block;
+  position: relative;
+}
+
+.spgallery-drop-area.highlight .underline {
+  width: 30% !important;
+  transition: 1s;
+}
+
+.spgallery-drop-area .underline {
+  width: 20%;
+  height: 2px;
+  background: #000;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.spgallery-drop-area .gallery .image-wrapper > img {
+  min-width: 200px;
+  min-height: 200px;
+  width: 200px;
+  height: 200px;
+}
+
+.spgallery-drop-area .gallery .image-wrapper > span.image-label {
+  display: block;
+  padding: 10px;
+}
+
+.spgallery-drop-area .progress-bar {
+  width: 100%;
+  display: none;
+}
+
+.image-wrapper > .inner-progress {
+  width: 100%;
+  margin: 8px auto;
+}
+
+.image-wrapper > .remove-image-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.image-wrapper:hover .image-wrapper > .remove-image-wrapper {
+  visibility: visible;
+}
+
+.image-wrapper > .remove-image {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  transition: 1s;
+}
+
+.image-wrapper > .remove-image:hover {
+  transform: scale(1.1);
+}
+a.remove-image {
+    background: #000;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    line-height: 30px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: none;
+}
+
+a.remove-image:hover, a.remove-image:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+button.upload-btn {
+  display: none;
+}
+
+/* progress bar */
+progress {
+  border-radius: 2px;
+  height: 10px;
+}
+progress::-webkit-progress-bar {
+  background-color: rgb(186, 188, 189);
+  border-radius: 2px;
+}
+progress::-webkit-progress-value {
+   border-radius: 2px;
+   background-color: #0091EA;
+}
+progress::-moz-progress-bar {
+  background-color: #0091EA;
+  border-radius: 2px;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: #7d0909;
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    transition: 1s;
+
+}
+
+progress[value]{
+    background-color: #7d0909;
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    transition: 1s;
+}
+
+/* close button */
+
+.spgallery-close:hover {
+  opacity: 1;
+}
+.spgallery-close:before, .spgallery-close:after {
+  position: absolute;
+  left: 13px;
+  content: ' ';
+  height: 18px;
+  width: 2px;
+  background-color: #fff;
+  top: 3px;
+}
+.spgallery-close:before {
+  transform: rotate(45deg);
+}
+.spgallery-close:after {
+  transform: rotate(-45deg);
+}
+
+progress.completed{
+  background-color:green;
+  color:green;
+  }
+progress.completed[value] {color:green} /* IE10 */
+progress.completed::-webkit-progress-bar-value {background-color:green}
+progress.completed::-webkit-progress-value {background-color:green}
+progress.completed::-moz-progress-bar {background-color:green}

@@ -1,0 +1,33 @@
+/**
+* @package mod_spproperty_emi_calculator
+* @author JoomShaper http://www.joomshaper.com
+* @copyright Copyright (c) 2010 - 2025 JoomShaper
+* @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 or later
+*/
+
+.sp-property-emi-calculator .spec-graph {
+    border-bottom: 1px solid #b7b7b7;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.sp-property-emi-calculator .spec-graph>div {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.spec-display-graph {
+    margin-bottom: 20px;
+}
+
+.sp-property-emi-calculator .spec-graph .spec-display-info {
+    padding-left: 30px;
+}
+
+.sp-property-emi-calculator .spec-graph>div {
+    flex: 0 0 50%;
+    max-width: 50%;
+}

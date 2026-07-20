@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.6"
+	client="site"
+	method="upgrade">
+	<name>SP Property Properties</name>
+	<author>JoomShaper.com</author>
+	<creationDate>September 2016</creationDate>
+	<copyright>Copyright (C) 2010 - 2016 JoomShaper. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later;</license>
+	<authorEmail>support@joomshaper.com</authorEmail>
+	<authorUrl>www.joomshaper.com</authorUrl>
+	<version>4.1.1</version>
+	<description>Properties module to show items for SP Property component</description>
+	<files>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+		<filename module="mod_spproperty_properties">mod_spproperty_properties.php</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">en-GB.mod_spproperty_properties.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params" addfieldpath="/components/com_spproperty/fields">
+
+			<fieldset name="basic">
+				<field name="catid" type="spcats" default="" label="MOD_SPPROPERTY_PROPERTIES_FIELD_SELECT_CATEGORY" description="MOD_SPPROPERTY_PROPERTIES_FIELD_SELECT_CATEGORY_DESC"/>
+
+				<field name="agentid" type="spagent" default="" label="MOD_SPPROPERTY_PROPERTIES_FIELD_SELECT_AGENT" description="MOD_SPPROPERTY_PROPERTIES_FIELD_SELECT_AGENT_DESC"/>
+
+				<field name="property_status" type="list" label="MOD_SPPROPERTY_PROPERTIES_STATUS" description="MOD_SPPROPERTY_PROPERTIES_STATUS_DESC">
+					<option value="">MOD_SPPROPERTY_ALL</option>
+					<option value="rent">MOD_SPPROPERTY_PROPERTOES_STATUS_RENT</option>
+					<option value="sell">MOD_SPPROPERTY_PROPERTOES_STATUS_SELL</option>
+					<option value="in_hold">MOD_SPPROPERTY_PROPERTOES_STATUS_IN_HOLD</option>
+					<option value="pending">MOD_SPPROPERTY_PROPERTOES_STATUS_IN_PENDING</option>
+					<option value="sold">MOD_SPPROPERTY_PROPERTOES_STATUS_IN_SOLD</option>
+					<option value="under_offer">MOD_SPPROPERTY_PROPERTOES_STATUS_IN_UNDER_OFFER</option>
+				</field>
+
+				<field name="order_by" type="list" default="" label="MOD_SPPROPERTY_PROPERTIES_FIELD_ORDER" description="MOD_SPPROPERTY_PROPERTIES_FIELD_ORDER_DESC">
+					<option value="desc">MOD_SPPROPERTY_PROPERTOES_FIELD_DESC</option>
+					<option value="asc">MOD_SPPROPERTY_PROPERTOES_FIELD_ASC</option>
+					<option value="featured">MOD_SPPROPERTY_PROPERTOES_FIELD_FEATURED</option>
+				</field>
+
+				<field name="columns" type="list" default="2" label="MOD_SPPROPERTY_PROPERTIES_FIELD_COLUMNS" description="MOD_SPPROPERTY_PROPERTIES_FIELD_COLUMNS_DESC">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="6">6</option>
+					<option value="12">12</option>
+				</field>
+
+				<field name="limit"
+					type="number"
+					default="4"
+					label="MOD_SPPROPERTY_PROPERTIES_FIELD_LIMIT"
+					description="MOD_SPPROPERTY_PROPERTIES_FIELD_LIMIT_DESC"
+				/>
+				<field name="see_all_btn"
+					type="radio"
+					class="btn-group btn-group-yesno radio"
+					default="1"
+					label="MOD_SPPROPERTY_PROPERTIES_SEE_ALL_BTN"
+					description="MOD_SPPROPERTY_PROPERTIES_SEE_ALL_BTN_DESC"
+				>
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+				</field>
+
+			</fieldset>
+
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

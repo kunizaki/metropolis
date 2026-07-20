@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension method="upgrade" type="file" version="3.6">
+  <name>SP Page Builder (pt-BR)</name>
+  <creationDate>13 Apr 2017</creationDate>
+  <author>JoomShaper</author>
+  <authorEmail>info@joomshaper.com</authorEmail>
+  <authorUrl>www.joomshaper.com</authorUrl>
+  <copyright>Copyright (c)2009-2025</copyright>
+<description>SP Page Builder language files (pt-BR)</description>
+  <version>2.0.1</version>
+
+  <fileset>
+    <files folder="admin" target="administrator/language/pt-BR/">
+      <file>pt-BR.com_sppagebuilder.ini</file>
+      <file>pt-BR.com_sppagebuilder.sys.ini</file>
+    </files>
+
+    <files folder="site" target="language/pt-BR/">
+      <file>pt-BR.com_sppagebuilder.ini</file>
+    </files>
+  </fileset>
+
+</extension>

@@ -1,0 +1,10 @@
+{
+    "host": "metropolis.factork.com.br",
+    "backup_date": "2026-07-20 16:41:25",
+    "akeeba_version": "10.3.6",
+    "php_version": "8.4.22",
+    "root": "\/home\/factork-metropolis\/htdocs\/metropolis.factork.com.br\/",
+    "custom_public": false,
+    "JPATH_ROOT": "\/home\/factork-metropolis\/htdocs\/metropolis.factork.com.br",
+    "JPATH_PUBLIC": "\/home\/factork-metropolis\/htdocs\/metropolis.factork.com.br"
+}
