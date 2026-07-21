@@ -64,8 +64,9 @@
 #spproperty-slider-alt .owl-item img,
 #spproperty-slider-alt .item img,
 .spproperty-gallery .item img {
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
     object-fit: cover;
     object-position: center;
     transition: .4s;
@@ -89,9 +90,6 @@
     -webkit-transition: all 400ms ease;
     width: 100%;
     height: -webkit-fill-available;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .spproperty .sp-properties-wrapper .property-details .property-image {
@@ -1772,4 +1770,8 @@ body.view-maps #sp-main-body>.container{
 }
 .spproperty-total-price {
     font-size: 28px;
+}
+
+.spproperty-img, #spproperty-slider-alt .owl-item {
+    aspect-ratio: auto;
 }
