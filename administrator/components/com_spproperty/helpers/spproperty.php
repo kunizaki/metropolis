@@ -147,7 +147,18 @@ class SppropertyHelper extends ContentHelper
 
         //Get Currency
         $currency = explode(':', $currency);
-        $locales  = ($currency[0] === "EUR") ? "it_IT" : "en_US";
+        
+        switch ($currency[0]) {
+            case "EUR":
+                $locales = "it_IT";
+                break;
+            case "BRL":
+                $locales = "pt_BR";
+                break;
+            default:
+                $locales = "en_US";
+                break;
+        }
 
         return $locales;
     }
@@ -229,8 +240,8 @@ class SppropertyHelper extends ContentHelper
         
         $formattedPrice = number_format((float) $price, 2, '.', '');
 
-        if ($local === 'it_IT') {
-            // Italian format: 1.234,56
+        if ($local === 'it_IT' || $local === 'pt_BR') {
+            // Italian/Brazilian format: 1.234,56
             $formattedPrice = number_format((float) $price, 2, ',', '.');
         } else {
             // US/International format: 1,234.56

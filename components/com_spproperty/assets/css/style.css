@@ -48,12 +48,36 @@
 .spproperty .sp-properties-wrapper .property-image {
     position: relative;
     overflow: hidden;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
 }
 
-.spproperty .sp-properties-wrapper .property-image img {
+.spproperty .sp-properties-list-wrapper .property-image {
+    aspect-ratio: 1 / 1;
+    height: auto;
+}
+
+.spproperty .sp-properties-wrapper .property-image img,
+#spproperty-slider .spproperty-img img,
+#spproperty-slider-alt .owl-item img,
+#spproperty-slider-alt .item img,
+.spproperty-gallery .item img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     transition: .4s;
     -webkit-transition: .4s;
+}
+
+.spproperty-gallery .item,
+#spproperty-slider .spproperty-img,
+#spproperty-slider-alt .owl-item,
+#spproperty-slider-alt .item {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
 }
 
 .spproperty .sp-properties-wrapper .property-details {

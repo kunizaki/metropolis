@@ -357,12 +357,15 @@ class SppropertyHelper
                 case "EUR":
                     $local = "it_IT";
                     break;
+                case "BRL":
+                    $local = "pt_BR";
+                    break;
                 default:
                     $local = "en_US";
                     break;
             }
 
-            if ($local === 'it_IT') {
+            if ($local === 'it_IT' || $local === 'pt_BR') {
                 $amt = number_format($amt, $decimals, ',', '.');
             } else {
                 $amt = number_format($amt, $decimals, '.', ',');
