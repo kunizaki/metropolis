@@ -18,6 +18,7 @@
     overflow: hidden;
     transition: all 400ms ease;
     -webkit-transition: all 400ms ease;
+    height: -webkit-fill-available;
 }
 .sp-properties-wrapper .property-url {
     position: absolute;
@@ -28,7 +29,7 @@
 }
 
 .spproperty .sp-properties-wrapper.property-status-sold .spproperty-badge-sold {
-  content: '';
+    content: '';
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     color: #fff;
@@ -48,12 +49,37 @@
 .spproperty .sp-properties-wrapper .property-image {
     position: relative;
     overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
 }
 
-.spproperty .sp-properties-wrapper .property-image img {
-    width: 100%;
+.spproperty .sp-properties-list-wrapper .property-image {
+    aspect-ratio: 1 / 1;
+    height: auto;
+}
+
+.spproperty .sp-properties-wrapper .property-image img,
+#spproperty-slider .spproperty-img img,
+#spproperty-slider-alt .owl-item img,
+#spproperty-slider-alt .item img,
+.spproperty-gallery .item img {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: center;
     transition: .4s;
     -webkit-transition: .4s;
+}
+
+.spproperty-gallery .item,
+#spproperty-slider .spproperty-img,
+#spproperty-slider-alt .owl-item,
+#spproperty-slider-alt .item {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
 }
 
 .spproperty .sp-properties-wrapper .property-details {
@@ -63,6 +89,7 @@
     transition: all 400ms ease;
     -webkit-transition: all 400ms ease;
     width: 100%;
+    height: -webkit-fill-available;
 }
 
 .spproperty .sp-properties-wrapper .property-details .property-image {
@@ -784,8 +811,8 @@
     padding: 6px 15px;
 }
 .spproperty-contact-us-widget .spproperty-widget-form .form-checkbox {
-  margin-top: 15px;
-  line-height: 22px;
+    margin-top: 15px;
+    line-height: 22px;
 }
 .spproperty-contact-us-widget .spproperty-widget-form .form-checkbox input[type='checkbox'],
 .spproperty-view-agent .spproperty-agent-form input[type='checkbox'] {
@@ -869,7 +896,7 @@
     display: inline-block;
 }
 .spproperty-agent-widget ul.spproperty-agent-mailing li a {
-  color: #000000;
+    color: #000000;
 }
 .spproperty-agent-widget ul.spproperty-agent-mailing li span {
     display: inline-block;
@@ -1017,76 +1044,76 @@
 }
 
 .circle-loader {
-  margin-bottom: 3.5em;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-left-color: #5cb85c;
-  animation: loader-spin 1.2s infinite linear;
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  border-radius: 50%;
-  width: 7em;
-  height: 7em;
+    margin-bottom: 3.5em;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-left-color: #5cb85c;
+    animation: loader-spin 1.2s infinite linear;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 50%;
+    width: 7em;
+    height: 7em;
 }
 
 .load-complete {
-  -webkit-animation: none;
-  animation: none;
-  border-color: #5cb85c;
-  transition: border 500ms ease-out;
+    -webkit-animation: none;
+    animation: none;
+    border-color: #5cb85c;
+    transition: border 500ms ease-out;
 }
 
 .checkmark {
-  display: none;
+    display: none;
 }
 .checkmark.draw:after {
-  animation-duration: 800ms;
-  animation-timing-function: ease;
-  animation-name: checkmark;
-  transform: scaleX(-1) rotate(135deg);
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-name: checkmark;
+    transform: scaleX(-1) rotate(135deg);
 }
 .checkmark:after {
-  opacity: 1;
-  height: 3.5em;
-  width: 1.75em;
-  transform-origin: left top;
-  border-right: 3px solid #5cb85c;
-  border-top: 3px solid #5cb85c;
-  content: '';
-  left: 1.75em;
-  top: 3.5em;
-  position: absolute;
+    opacity: 1;
+    height: 3.5em;
+    width: 1.75em;
+    transform-origin: left top;
+    border-right: 3px solid #5cb85c;
+    border-top: 3px solid #5cb85c;
+    content: '';
+    left: 1.75em;
+    top: 3.5em;
+    position: absolute;
 }
 
 @keyframes loader-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 @keyframes checkmark {
-  0% {
-    height: 0;
-    width: 0;
-    opacity: 1;
-  }
-  20% {
-    height: 0;
-    width: 1.75em;
-    opacity: 1;
-  }
-  40% {
-    height: 3.5em;
-    width: 1.75em;
-    opacity: 1;
-  }
-  100% {
-    height: 3.5em;
-    width: 1.75em;
-    opacity: 1;
-  }
+    0% {
+        height: 0;
+        width: 0;
+        opacity: 1;
+    }
+    20% {
+        height: 0;
+        width: 1.75em;
+        opacity: 1;
+    }
+    40% {
+        height: 3.5em;
+        width: 1.75em;
+        opacity: 1;
+    }
+    100% {
+        height: 3.5em;
+        width: 1.75em;
+        opacity: 1;
+    }
 }
 
 .spproperty-features-image {
@@ -1279,7 +1306,7 @@
 }
 .view-property .modal-backdrop{
     display: none;
-} 
+}
 
 .property-view .active-view {
     border: 2px solid #588c0e !important;
@@ -1473,49 +1500,49 @@ body.com-spproperty.view-gallery .spproperty-gallery-title-wrap:before {
 
 /* Update 2.2 css */
 .com-spproperty.view-property .spproperty-view-property #spproperty-slider-alt .owl-nav {
-  margin: 0;
+    margin: 0;
 }
 .com-spproperty.view-property .spproperty-view-property #spproperty-slider-alt .owl-nav > div {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  width: 57px;
-  height: 57px;
-  border: 2px solid #000;
-  background: transparent;
-  margin: 0;
-  padding: 0;
-  border-radius: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 57px;
+    height: 57px;
+    border: 2px solid #000;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
 }
 .com-spproperty.view-property .spproperty-view-property #spproperty-slider-alt .owl-nav > div.owl-prev {
-  left: 20px;
+    left: 20px;
 }
 .com-spproperty.view-property .spproperty-view-property #spproperty-slider-alt .owl-nav > div.owl-next {
-  right: 20px;
+    right: 20px;
 }
 .com-spproperty.view-property .spproperty-view-property #spproperty-slider-alt .owl-nav > div:hover, .com-spproperty.view-property .spproperty-view-property #spproperty-slider-alt .owl-nav > div:focus {
-  background-color: #000;
+    background-color: #000;
 }
 .com-spproperty.view-property .spproperty-view-property #spproperty-slider-alt .owl-nav > div:hover i.fa, .com-spproperty.view-property .spproperty-view-property #spproperty-slider-alt .owl-nav > div:focus i.fa {
-  color: #fff;
+    color: #fff;
 }
 .com-spproperty.view-property .spproperty-view-property #spproperty-slider-alt .owl-nav > div i.fa {
-  font-size: 30px;
-  line-height: 52px;
-  color: #000;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+    font-size: 30px;
+    line-height: 52px;
+    color: #000;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
 }
 .com-spproperty.view-property .property-dots-container {
-  margin-top: 30px;
-  margin-bottom: 60px;
-  max-width: 100%;
-  overflow: auto;
-  -ms-overflow-style: none;
-  overflow: -moz-scrollbars-none;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    max-width: 100%;
+    overflow: auto;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
 }
 
 .com-spproperty.view-property .property-dots-container::-webkit-scrollbar {
@@ -1523,76 +1550,76 @@ body.com-spproperty.view-gallery .spproperty-gallery-title-wrap:before {
 }
 
 .com-spproperty.view-property .property-dots-container .owl-dot {
-  background: #000;
+    background: #000;
 }
 .com-spproperty.view-property .property-dots-container .owl-dot:not(:last-child) {
-  margin-right: 30px;
+    margin-right: 30px;
 }
 .com-spproperty.view-property .property-dots-container .owl-dot button.owl-dot {
-  margin-right: 0px;
-  display: block;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+    margin-right: 0px;
+    display: block;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
 }
 .com-spproperty.view-property .property-dots-container .owl-dot button.owl-dot:hover, .com-spproperty.view-property .property-dots-container .owl-dot button.owl-dot:focus {
-  background-color: #000;
+    background-color: #000;
 }
 .com-spproperty.view-property .property-dots-container .owl-dot.active button {
-  border: none;
-  opacity: 0.6;
+    border: none;
+    opacity: 0.6;
 }
 
 /* info window */
 .infowindow{
-  width: 250px;
+    width: 250px;
 }
 .infowindow img{
-  width: 100%;
+    width: 100%;
 }
 .infowindow .info-wrapper{
-  padding: 20px;
-  color: #7c7c7c;
+    padding: 20px;
+    color: #7c7c7c;
 }
 .infowindow .info-wrapper .price-text{
-  font-size: 18px;
-  color: #007b76;
-  margin-bottom: 14px;
+    font-size: 18px;
+    color: #007b76;
+    margin-bottom: 14px;
 }
 .infowindow .info-wrapper .title-wrapper{
-  margin-bottom: 12px;
+    margin-bottom: 12px;
 }
 .infowindow .info-wrapper .title-wrapper .price > span{
-  font-size: 12px;
+    font-size: 12px;
 }
 .infowindow .info-wrapper .title-wrapper p{
-  margin-bottom: 5px;
-  font-weight: 700;
+    margin-bottom: 5px;
+    font-weight: 700;
 }
 .infowindow .info-wrapper .prize-wrap{
-  margin-bottom: 5px;
-  font-weight: 700;
-  font-size: 18px;
-  color: #007b76;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #007b76;
 }
 .infowindow .info-wrapper .property-title{
-  font-weight: 600;
-  color: #000;
+    font-weight: 600;
+    color: #000;
 }
 .infowindow .info-wrapper .location-wrapper{
-  font-size: 12px;
-  line-height: 1.4;
-  font-weight: 400;
-  display: flex;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 400;
+    display: flex;
 }
 .infowindow .info-wrapper .location-wrapper span.fa{
-  padding-right: 10px;
+    padding-right: 10px;
 }
 .infowindow .info-wrapper .location-wrapper i.fa{
-  font-size: 18px;
-  margin-left: 2px;
-  margin-right: 5px;
+    font-size: 18px;
+    margin-left: 2px;
+    margin-right: 5px;
 }
 
 /* View maps */
@@ -1602,30 +1629,30 @@ body.com-spproperty.view-gallery .spproperty-gallery-title-wrap:before {
     margin-left: 10px;
 }
 .spproperty .view-button a span{
-  font-size: 20px;
-  width: 55px;
-  height: 55px;
-  line-height: 55px;
-  border: solid 2px #d8d8d8;
-  border-radius: 2px;
-  color: #d8d8d8;
-  transition: 0.3s;
+    font-size: 20px;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    border: solid 2px #d8d8d8;
+    border-radius: 2px;
+    color: #d8d8d8;
+    transition: 0.3s;
 }
 .spproperty .view-button a:hover span{
-  border: solid 2px #000;
-  color: #000;
+    border: solid 2px #000;
+    color: #000;
 }
 .spproperty .view-button .active-view{
-  border: 0 !important;
-  background: transparent !important;
+    border: 0 !important;
+    background: transparent !important;
 }
 .spproperty .view-button .active-view span{
-  border: solid 2px #000;
-  color: #000;
+    border: solid 2px #000;
+    color: #000;
 }
 #sp-property-properties-map #sp-property-properties{
-  padding: 20px 0px 20px 30px;
-  height: 1100px;
+    padding: 20px 0px 20px 30px;
+    height: 1100px;
 }
 .spproperty .sp-no-item-found{
     margin-top: 50px;
@@ -1657,90 +1684,94 @@ body.view-maps #sp-main-body>.container{
 
 /* //Custom Scrollbar */
 [data-simplebar] {
-  position: relative;
-  z-index: 0;
-  overflow: hidden!important;
-  max-height: inherit;
-  -webkit-overflow-scrolling: touch; /* Trigger native scrolling for mobile, if not supported, plugin is used. */
+    position: relative;
+    z-index: 0;
+    overflow: hidden!important;
+    max-height: inherit;
+    -webkit-overflow-scrolling: touch; /* Trigger native scrolling for mobile, if not supported, plugin is used. */
 }
 [data-simplebar="init"] {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 .simplebar-scroll-content {
-  overflow-x: hidden!important;
-  overflow-y: scroll;
-  min-width: 100%!important;
-  max-height: inherit!important;
-  -webkit-box-sizing: content-box!important;
-          box-sizing: content-box!important;
+    overflow-x: hidden!important;
+    overflow-y: scroll;
+    min-width: 100%!important;
+    max-height: inherit!important;
+    -webkit-box-sizing: content-box!important;
+    box-sizing: content-box!important;
 }
 .simplebar-content {
-  overflow-y: hidden!important;
-  overflow-x: scroll;
-  -webkit-box-sizing: border-box!important;
-          box-sizing: border-box!important;
-  min-height: 100%!important;
+    overflow-y: hidden!important;
+    overflow-x: scroll;
+    -webkit-box-sizing: border-box!important;
+    box-sizing: border-box!important;
+    min-height: 100%!important;
 }
 .simplebar-track {
-  z-index: 10;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 11px;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 11px;
 }
 .simplebar-scrollbar {
-  position: absolute;
-  right: 2px;
-  width: 7px;
-  min-height: 10px;
+    position: absolute;
+    right: 2px;
+    width: 7px;
+    min-height: 10px;
 }
 .simplebar-scrollbar:before {
-  position: absolute;
-  content: "";
-  background: black;
-  border-radius: 7px;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  -webkit-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
+    position: absolute;
+    content: "";
+    background: black;
+    border-radius: 7px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
 }
 .simplebar-track:hover .simplebar-scrollbar:before,
 .simplebar-track .simplebar-scrollbar.visible:before {
-  /* When hovered, remove all transitions from drag handle */
-  opacity: 0.5;
-  -webkit-transition: opacity 0 linear;
-  transition: opacity 0 linear;
+    /* When hovered, remove all transitions from drag handle */
+    opacity: 0.5;
+    -webkit-transition: opacity 0 linear;
+    transition: opacity 0 linear;
 }
 .simplebar-track.vertical {
-  top: 0;
+    top: 0;
 }
 .simplebar-track.vertical .simplebar-scrollbar:before {
-  top: 2px;
-  bottom: 2px;
+    top: 2px;
+    bottom: 2px;
 }
 .simplebar-track.horizontal {
-  left: 0;
-  width: auto;
-  height: 11px;
-  display: none;
+    left: 0;
+    width: auto;
+    height: 11px;
+    display: none;
 }
 
 .simplebar-track.horizontal .simplebar-scrollbar:before {
-  height: 100%;
-  left: 2px;
-  right: 2px;
+    height: 100%;
+    left: 2px;
+    right: 2px;
 }
 .horizontal.simplebar-track .simplebar-scrollbar {
-  right: auto;
-  top: 2px;
-  height: 7px;
-  min-height: 0;
-  min-width: 10px;
-  width: auto;
+    right: auto;
+    top: 2px;
+    height: 7px;
+    min-height: 0;
+    min-width: 10px;
+    width: auto;
 }
 .spproperty-total-price {
     font-size: 28px;
+}
+
+.spproperty-img, #spproperty-slider-alt .owl-item {
+    aspect-ratio: auto;
 }

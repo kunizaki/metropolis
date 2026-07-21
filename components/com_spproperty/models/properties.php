@@ -195,11 +195,11 @@ class SppropertyModelProperties extends ListModel
                 $query->where($db->quoteName('a.featured') . ' = 1');
                 $query->order($db->quoteName('a.ordering') . ' DESC');
             } elseif ($order_by == 'latest') {
-                $query->order($db->quoteName('a.created') . ' DESC');
+                $query->order($db->quoteName('a.modified') . ' DESC');
             } elseif ($order_by == 'oldest') {
-                $query->order($db->quoteName('a.created') . ' ASC');
+                $query->order($db->quoteName('a.modified') . ' ASC');
             } else {
-                $query->order($db->quoteName('a.ordering') . ' DESC');
+                $query->order($db->quoteName('a.modified') . ' DESC');
             }
         }
 
@@ -269,7 +269,7 @@ class SppropertyModelProperties extends ListModel
     public static function getAllProperties($params = '', $limit = '')
     {
 
-        $order_by = $params->get('order_by', 'DESC');
+        $order_by = $params->get('order_by', 'latest');
 
         $db = Factory::getDbo();
         $query = $db->getQuery(true);
@@ -305,7 +305,7 @@ class SppropertyModelProperties extends ListModel
             $query->where($db->quoteName('a.featured') . ' = 1');
             $query->order($db->quoteName('a.ordering') . ' DESC');
         } else {
-            $query->order($db->quoteName('a.ordering') . ' DESC');
+            $query->order($db->quoteName('a.modified') . ' DESC');
         }
         $db->setQuery($query);
         $results = $db->loadObjectList();
